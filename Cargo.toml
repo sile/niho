@@ -1,0 +1,8 @@
+[package]
+name = "niho"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+noargs = "0.4.1"
+orfail = "1.1.0"
