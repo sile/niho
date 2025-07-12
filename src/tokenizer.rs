@@ -21,6 +21,86 @@ impl<'a> Tokenizer<'a> {
         self.text = remaining;
         token
     }
+
+    fn take_hiragana_token(&mut self) -> Token<'a> {
+        let mut chars = self.text.char_indices();
+        let mut end_pos = self.text.len();
+
+        // Skip the first character (we know it's valid)
+        chars.next();
+
+        // Find the end of the hiragana token
+        for (pos, ch) in chars {
+            if !matches!(
+                ch,
+                'a'..='z' | ',' | '.' | '?' | '!' | '-' | '[' | ']' | '(' | ')'
+            ) {
+                end_pos = pos;
+                break;
+            }
+        }
+
+        let text = &self.text[..end_pos];
+        self.text = &self.text[end_pos..];
+        Token::Hiragana { text }
+    }
+
+    fn take_henkan_token(&mut self) -> Token<'a> {
+        let mut chars = self.text.char_indices();
+        let mut end_pos = self.text.len();
+        let mut hash_pos = None;
+
+        // Skip the first character (we know it's uppercase)
+        chars.next();
+
+        // Find the end of the henkan token
+        for (pos, ch) in chars {
+            match ch {
+                'a'..='z' | '-' => {
+                    // Valid henkan character, continue
+                }
+                '#' => {
+                    // Found hash, now we need to find digits
+                    hash_pos = Some(pos);
+                    break;
+                }
+                _ => {
+                    // Invalid character, end token here
+                    end_pos = pos;
+                    break;
+                }
+            }
+        }
+
+        // If we found a hash, we need to parse the number after it
+        if let Some(hash_start) = hash_pos {
+            let remaining_text = &self.text[hash_start + 1..];
+            let mut digit_end = 0;
+
+            for (i, ch) in remaining_text.char_indices() {
+                if ch.is_ascii_digit() {
+                    digit_end = i + 1;
+                } else {
+                    break;
+                }
+            }
+
+            if digit_end > 0 {
+                // We have valid digits after the hash
+                let text = &self.text[..hash_start];
+                let index_str = &remaining_text[..digit_end];
+                let index = index_str.parse().unwrap_or(0);
+
+                self.text = &self.text[hash_start + 1 + digit_end..];
+                return Token::Henkan { text, index };
+            }
+        }
+
+        // No valid #number found, treat as raw token up to the end position
+        let text = &self.text[..end_pos];
+        self.text = &self.text[end_pos..];
+        Token::Raw { text }
+    }
 }
 
 impl<'a> Iterator for Tokenizer<'a> {
@@ -37,9 +117,9 @@ impl<'a> Iterator for Tokenizer<'a> {
             self.text = s;
             Some(self.take_raw_token(|s| s.split_once(WHITESPACE_CHARS)))
         } else if self.text.starts_with(HENKAN_START_CHARS) {
-            todo!()
+            Some(self.take_henkan_token())
         } else if self.text.starts_with(HIRAGANA_START_CHARS) {
-            todo!()
+            Some(self.take_hiragana_token())
         } else {
             Some(self.take_raw_token(|s| s.split_once(WHITESPACE_CHARS)))
         }
