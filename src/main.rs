@@ -1,3 +1,6 @@
+use niho::tokenizer::Tokenizer;
+use orfail::OrFail;
+
 fn main() -> noargs::Result<()> {
     let mut args = noargs::raw_args();
     args.metadata_mut().app_name = env!("CARGO_PKG_NAME");
@@ -11,6 +14,11 @@ fn main() -> noargs::Result<()> {
     if let Some(help) = args.finish()? {
         print!("{help}");
         return Ok(());
+    }
+
+    let input = std::io::read_to_string(std::io::stdin().lock()).or_fail()?;
+    for token in Tokenizer::new(&input) {
+        dbg!(token);
     }
 
     Ok(())
