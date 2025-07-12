@@ -1,4 +1,4 @@
-use niho::tokenizer::Tokenizer;
+use niho::{converter::Converter, tokenizer::Tokenizer};
 use orfail::OrFail;
 
 fn main() -> noargs::Result<()> {
@@ -26,6 +26,11 @@ fn main() -> noargs::Result<()> {
         }
         return Ok(());
     }
+
+    let converter = Converter::new();
+    let tokens = Tokenizer::new(&input);
+    let result = converter.convert_tokens(tokens);
+    print!("{}", result);
 
     Ok(())
 }
