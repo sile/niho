@@ -98,3 +98,23 @@ pub enum Token<'a> {
     // [A-Z][a-z-]*(#[0-9]+)
     Henkan { text: &'a str, index: usize },
 }
+
+impl<'a> nojson::DisplayJson for Token<'a> {
+    fn fmt(&self, f: &mut nojson::JsonFormatter<'_, '_>) -> std::fmt::Result {
+        f.object(|f| match self {
+            Token::Raw { text } => {
+                f.member("type", "Raw")?;
+                f.member("text", text)
+            }
+            Token::Hiragana { text } => {
+                f.member("type", "Hiragana")?;
+                f.member("text", text)
+            }
+            Token::Henkan { text, index } => {
+                f.member("type", "Henkan")?;
+                f.member("text", text)?;
+                f.member("index", index)
+            }
+        })
+    }
+}

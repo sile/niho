@@ -18,7 +18,7 @@ fn main() -> noargs::Result<()> {
 
     let input = std::io::read_to_string(std::io::stdin().lock()).or_fail()?;
     for token in Tokenizer::new(&input) {
-        dbg!(token);
+        println!("{}", nojson::Json(&token));
     }
 
     Ok(())
