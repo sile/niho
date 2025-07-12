@@ -12,7 +12,10 @@ fn main() -> noargs::Result<()> {
     }
     noargs::HELP_FLAG.take_help(&mut args);
 
-    let tokenize = noargs::flag("tokenize").take(&mut args).is_present();
+    let tokenize = noargs::flag("tokenize")
+        .short('t')
+        .take(&mut args)
+        .is_present();
     if let Some(help) = args.finish()? {
         print!("{help}");
         return Ok(());
