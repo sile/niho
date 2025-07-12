@@ -23,25 +23,14 @@ impl<'a> Tokenizer<'a> {
     }
 
     fn take_hiragana_token(&mut self) -> Token<'a> {
-        let mut chars = self.text.char_indices();
-        let mut end_pos = self.text.len();
-
-        // Skip the first character (we know it's valid)
-        chars.next();
-
-        // Find the end of the hiragana token
-        for (pos, ch) in chars {
-            if !matches!(
-                ch,
+        let pattern = |c| {
+            !matches!(
+                c,
                 'a'..='z' | ',' | '.' | '?' | '!' | '-' | '[' | ']' | '(' | ')'
-            ) {
-                end_pos = pos;
-                break;
-            }
-        }
-
-        let text = &self.text[..end_pos];
-        self.text = &self.text[end_pos..];
+            )
+        };
+        let (text, remaining) = self.text.split_once(pattern).unwrap_or((self.text, ""));
+        self.text = remaining;
         Token::Hiragana { text }
     }
 
