@@ -11,14 +11,20 @@ fn main() -> noargs::Result<()> {
         return Ok(());
     }
     noargs::HELP_FLAG.take_help(&mut args);
+
+    let tokenize = noargs::flag("tokenize").take(&mut args).is_present();
     if let Some(help) = args.finish()? {
         print!("{help}");
         return Ok(());
     }
 
     let input = std::io::read_to_string(std::io::stdin().lock()).or_fail()?;
-    for token in Tokenizer::new(&input) {
-        println!("{}", nojson::Json(&token));
+    let tokens = Tokenizer::new(&input);
+    if tokenize {
+        for token in tokens {
+            println!("{}", nojson::Json(&token));
+        }
+        return Ok(());
     }
 
     Ok(())
