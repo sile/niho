@@ -28,7 +28,7 @@ $ cargo install niho
 - **Capitalized text**: Converted to katakana (e.g., `Ko-hi-` → `コーヒー`)
 - **Text ending with `_`**: Converted to kanji using dictionary lookup (e.g., `nihongo_` → `日本語`)
 - **Text wrapped in `___`**: Kept as raw text without conversion (e.g., `___Hello___` → `Hello`)
-- **Text prefixed with `_`**: Kept as raw text until whitespace (e.g., `_Hello world` → `Hello`)
+- **Text prefixed with `_`**: Kept as raw text until whitespace (e.g., `_Hello desu` → `Hello です`)
 
 ### Examples
 
