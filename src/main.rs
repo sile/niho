@@ -16,11 +16,13 @@ fn main() -> noargs::Result<()> {
 
     let tokenize = noargs::flag("tokenize")
         .short('t')
+        .doc("Output tokenized input as JSON instead of converting to Japanese")
         .take(&mut args)
         .is_present();
     let dictionary_file_path: Option<PathBuf> = noargs::opt("dictionary-file")
         .short('d')
         .ty("PATH")
+        .doc("Path to dictionary file")
         .env("NIHO_DICTIONARY_FILE")
         .take(&mut args)
         .present_and_then(|a| a.value().parse())?;
