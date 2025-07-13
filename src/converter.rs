@@ -6,60 +6,6 @@ use crate::{
 };
 use std::{io::Write, num::NonZeroUsize};
 
-#[derive(Debug, Default)]
-pub struct KanaConverter<'a> {
-    pub mappings: Vec<KanaMapping<'a>>,
-}
-
-impl<'a> KanaConverter<'a> {
-    pub fn insert_mapping(
-        &mut self,
-        from: DictionaryString<'a>,
-        to: DictionaryString<'a>,
-        consume_chars: Option<NonZeroUsize>,
-    ) {
-        self.mappings.push(KanaMapping {
-            from,
-            to,
-            consume_chars,
-        });
-    }
-
-    pub fn finish(&mut self) {
-        self.mappings.sort_by(|a, b| a.from.cmp(&b.from));
-    }
-
-    pub fn convert<W: Write>(&self, mut writer: W, text: &str) -> orfail::Result<()> {
-        let text = text.to_ascii_lowercase();
-        let mut s = text.as_str();
-        'root: while !s.is_empty() {
-            for mapping in self.mappings.iter().rev() {
-                if s.starts_with(mapping.from.as_ref()) {
-                    write!(writer, "{}", mapping.to).or_fail()?;
-                    s = if let Some(n) = mapping.consume_chars {
-                        &s[n.get()..]
-                    } else {
-                        &s[mapping.from.len()..]
-                    };
-                    continue 'root;
-                }
-            }
-
-            let (i, c) = s.char_indices().next().expect("infallible");
-            write!(writer, "{c}").or_fail()?;
-            s = &s[i..];
-        }
-        Ok(())
-    }
-}
-
-#[derive(Debug)]
-pub struct KanaMapping<'a> {
-    pub from: DictionaryString<'a>,
-    pub to: DictionaryString<'a>,
-    pub consume_chars: Option<NonZeroUsize>,
-}
-
 #[derive(Debug)]
 pub struct Converter<'a> {
     hiragana: KanaConverter<'a>,
@@ -102,4 +48,58 @@ impl<'a> Converter<'a> {
         }
         Ok(())
     }
+}
+
+#[derive(Debug, Default)]
+struct KanaConverter<'a> {
+    mappings: Vec<KanaMapping<'a>>,
+}
+
+impl<'a> KanaConverter<'a> {
+    fn insert_mapping(
+        &mut self,
+        from: DictionaryString<'a>,
+        to: DictionaryString<'a>,
+        consume_chars: Option<NonZeroUsize>,
+    ) {
+        self.mappings.push(KanaMapping {
+            from,
+            to,
+            consume_chars,
+        });
+    }
+
+    fn finish(&mut self) {
+        self.mappings.sort_by(|a, b| a.from.cmp(&b.from));
+    }
+
+    fn convert<W: Write>(&self, mut writer: W, text: &str) -> orfail::Result<()> {
+        let text = text.to_ascii_lowercase();
+        let mut s = text.as_str();
+        'root: while !s.is_empty() {
+            for mapping in self.mappings.iter().rev() {
+                if s.starts_with(mapping.from.as_ref()) {
+                    write!(writer, "{}", mapping.to).or_fail()?;
+                    s = if let Some(n) = mapping.consume_chars {
+                        &s[n.get()..]
+                    } else {
+                        &s[mapping.from.len()..]
+                    };
+                    continue 'root;
+                }
+            }
+
+            let (i, c) = s.char_indices().next().expect("infallible");
+            write!(writer, "{c}").or_fail()?;
+            s = &s[i..];
+        }
+        Ok(())
+    }
+}
+
+#[derive(Debug)]
+struct KanaMapping<'a> {
+    from: DictionaryString<'a>,
+    to: DictionaryString<'a>,
+    consume_chars: Option<NonZeroUsize>,
 }
