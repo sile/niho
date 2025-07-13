@@ -1,5 +1,5 @@
 # niho
 
 ```
-echo _niho ha, Ro-maJi#1 wo Nihongo ni Henkan surutameno Tu-ru desu. | niho
+echo _niho ha, ro-ma_ji_ wo nihondo_ni henkan_surutameno tu-ru_desu. | niho
 ```

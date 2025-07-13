@@ -25,7 +25,8 @@ impl Converter {
                 Token::Hiragana { text } => {
                     result.push_str(&self.convert_hiragana(text));
                 }
-                Token::Henkan { text, index } => {
+                Token::Henkan { text } => {
+                    let index = 0; // todo
                     result.push_str(&self.convert_henkan(text, index));
                 }
             }

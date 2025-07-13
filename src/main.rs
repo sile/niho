@@ -31,7 +31,6 @@ fn main() -> noargs::Result<()> {
     }
 
     let converter = Converter::new();
-    let tokens = Tokenizer::new(&input);
     let result = converter.convert_tokens(tokens);
     print!("{}", result);
 
