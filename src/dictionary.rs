@@ -5,55 +5,48 @@ use std::{
 };
 
 #[derive(Debug)]
-pub struct Dictionary<R> {
-    reader: R,
-    line_buf: String,
-    line_number: usize,
+pub struct Dictionary<'a> {
+    text: &'a str,
+    line: usize,
 }
 
-impl<R: BufRead> Iterator for Dictionary<R> {
-    type Item = Result<DictionaryEntry, DictionaryError>;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        self.line_buf.clear();
-        match self.reader.read_line(&mut self.line_buf) {
-            Err(e) => todo!(),
-            Ok(0) => None,
-            Ok(_) => {
-                self.line_number += 1;
-                todo!()
-            }
-        }
+impl<'a> Dictionary<'a> {
+    pub fn new(text: &'a str) -> Self {
+        Self { text, line: 0 }
     }
 }
 
-impl Default for Dictionary<BufReader<&'static [u8]>> {
+impl<'a> Iterator for Dictionary<'a> {
+    type Item = Result<DictionaryEntry<'a>, DictionaryError>;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        todo!()
+    }
+}
+
+impl Default for Dictionary<'static> {
     fn default() -> Self {
-        Self {
-            line_buf: String::new(),
-            line_number: 0,
-            reader: BufReader::new(include_str!("../default-dic.jsonl").as_bytes()),
-        }
+        Self::new(include_str!("../default-dic.jsonl"))
     }
 }
 
 pub type DictionaryString<'a> = Cow<'a, str>;
 
 #[derive(Debug)]
-pub enum DictionaryEntry {
+pub enum DictionaryEntry<'a> {
     Hiragana {
-        from: String,
-        to: String,
+        from: DictionaryString<'a>,
+        to: DictionaryString<'a>,
         consume_chars: Option<NonZeroUsize>,
     },
     Katakana {
-        from: String,
-        to: String,
+        from: DictionaryString<'a>,
+        to: DictionaryString<'a>,
         consume_chars: Option<NonZeroUsize>,
     },
     Henkan {
-        from: String,
-        to: String,
+        from: DictionaryString<'a>,
+        to: DictionaryString<'a>,
     },
 }
 
