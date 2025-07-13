@@ -1,8 +1,4 @@
-use std::{
-    borrow::Cow,
-    io::{BufRead, BufReader},
-    num::NonZeroUsize,
-};
+use std::{borrow::Cow, num::NonZeroUsize};
 
 #[derive(Debug)]
 pub struct Dictionary<'a> {
