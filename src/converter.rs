@@ -30,7 +30,7 @@ impl<'a> Converter<'a> {
                     to,
                     consume_chars,
                 } => katakana.insert_mapping(from, to, consume_chars),
-                DictionaryEntry::Henkan { from, to } => todo!(),
+                DictionaryEntry::Kanji { from, to } => todo!(),
             }
         }
         hiragana.finish();
@@ -44,7 +44,7 @@ impl<'a> Converter<'a> {
             Token::Raw { text } => write!(writer, "{text}").or_fail()?,
             Token::Hiragana { text } => self.hiragana.convert(writer, text).or_fail()?,
             Token::Katakana { text } => self.katakana.convert(writer, text).or_fail()?,
-            Token::Henkan { text } => write!(writer, " TODO ").or_fail()?,
+            Token::Kanji { text } => write!(writer, " TODO ").or_fail()?,
         }
         Ok(())
     }

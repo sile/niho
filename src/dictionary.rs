@@ -49,7 +49,7 @@ pub enum DictionaryEntry<'a> {
         to: DictionaryString<'a>,
         consume_chars: Option<NonZeroUsize>,
     },
-    Henkan {
+    Kanji {
         from: DictionaryString<'a>,
         to: DictionaryString<'a>,
     },
@@ -87,7 +87,16 @@ impl<'a> DictionaryEntry<'a> {
                     .to_unquoted_string_str()?,
                 consume_chars: value.to_member("consume_chars")?.try_into()?,
             }),
-            "henkan" => todo!(),
+            "kanji" => Ok(Self::Kanji {
+                from: value
+                    .to_member("from")?
+                    .required()?
+                    .to_unquoted_string_str()?,
+                to: value
+                    .to_member("to")?
+                    .required()?
+                    .to_unquoted_string_str()?,
+            }),
             ty => Err(value.invalid(format!("unknown type: {ty:?}"))),
         }
     }

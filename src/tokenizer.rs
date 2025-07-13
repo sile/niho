@@ -26,10 +26,10 @@ impl<'a> Tokenizer<'a> {
         let pattern = |c: char| c == '_' || c.is_ascii_whitespace();
         let pos = self.text.find(pattern).unwrap_or(self.text.len());
         let text = &self.text[..pos];
-        let is_henkan = self.text[pos..].starts_with('_');
+        let is_kanji = self.text[pos..].starts_with('_');
         self.text = &self.text[pos + 1..];
-        if is_henkan {
-            Token::Henkan { text }
+        if is_kanji {
+            Token::Kanji { text }
         } else if text.starts_with(|c| matches!(c, 'A'..='Z')) {
             Token::Katakana { text }
         } else {
@@ -62,7 +62,7 @@ pub enum Token<'a> {
     Raw { text: &'a str },
     Hiragana { text: &'a str },
     Katakana { text: &'a str },
-    Henkan { text: &'a str },
+    Kanji { text: &'a str },
 }
 
 impl<'a> nojson::DisplayJson for Token<'a> {
@@ -80,8 +80,8 @@ impl<'a> nojson::DisplayJson for Token<'a> {
                 f.member("type", "katakana")?;
                 f.member("text", text)
             }
-            Token::Henkan { text } => {
-                f.member("type", "henkan")?;
+            Token::Kanji { text } => {
+                f.member("type", "kanji")?;
                 f.member("text", text)
             }
         })
