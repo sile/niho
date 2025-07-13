@@ -4,19 +4,20 @@ use crate::{
     dictionary::{Dictionary, DictionaryEntry, DictionaryString},
     tokenizer::Token,
 };
-use std::{io::Write, num::NonZeroUsize};
+use std::{collections::HashMap, io::Write, num::NonZeroUsize};
 
 #[derive(Debug)]
 pub struct Converter<'a> {
     hiragana: KanaConverter<'a>,
     katakana: KanaConverter<'a>,
+    kanji: KanjiConverter<'a>,
 }
 
 impl<'a> Converter<'a> {
     pub fn new(dic: Dictionary<'a>) -> orfail::Result<Self> {
         let mut hiragana = KanaConverter::default();
         let mut katakana = KanaConverter::default();
-
+        let mut kanji = KanjiConverter::default();
         for entry in dic {
             let entry = entry.or_fail()?;
             match entry {
@@ -30,13 +31,17 @@ impl<'a> Converter<'a> {
                     to,
                     consume_chars,
                 } => katakana.insert_mapping(from, to, consume_chars),
-                DictionaryEntry::Kanji { from, to } => todo!(),
+                DictionaryEntry::Kanji { from, to } => kanji.insert_mapping(from, to),
             }
         }
         hiragana.finish();
         katakana.finish();
 
-        Ok(Self { hiragana, katakana })
+        Ok(Self {
+            hiragana,
+            katakana,
+            kanji,
+        })
     }
 
     pub fn convert<W: Write>(&self, mut writer: W, token: Token<'_>) -> orfail::Result<()> {
@@ -44,7 +49,7 @@ impl<'a> Converter<'a> {
             Token::Raw { text } => write!(writer, "{text}").or_fail()?,
             Token::Hiragana { text } => self.hiragana.convert(writer, text).or_fail()?,
             Token::Katakana { text } => self.katakana.convert(writer, text).or_fail()?,
-            Token::Kanji { text } => write!(writer, " TODO ").or_fail()?,
+            Token::Kanji { text } => self.kanji.convert(writer, text).or_fail()?,
         }
         Ok(())
     }
@@ -102,4 +107,24 @@ struct KanaMapping<'a> {
     from: DictionaryString<'a>,
     to: DictionaryString<'a>,
     consume_chars: Option<NonZeroUsize>,
+}
+
+#[derive(Debug, Default)]
+struct KanjiConverter<'a> {
+    mappings: HashMap<DictionaryString<'a>, DictionaryString<'a>>,
+}
+
+impl<'a> KanjiConverter<'a> {
+    fn insert_mapping(&mut self, from: DictionaryString<'a>, to: DictionaryString<'a>) {
+        self.mappings.insert(from, to);
+    }
+
+    fn convert<W: Write>(&self, mut writer: W, text: &str) -> orfail::Result<()> {
+        if let Some(s) = self.mappings.get(text) {
+            write!(writer, "{s}").or_fail()?;
+        } else {
+            write!(writer, "{text}").or_fail()?;
+        }
+        Ok(())
+    }
 }
