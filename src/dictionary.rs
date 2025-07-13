@@ -7,6 +7,8 @@ pub struct Dictionary<'a> {
 }
 
 impl<'a> Dictionary<'a> {
+    pub const DEFAULT: &'static str = include_str!("../default-dic.jsonl");
+
     pub fn new(text: &'a str) -> Self {
         Self { text, line: 0 }
     }
@@ -30,12 +32,6 @@ impl<'a> Iterator for Dictionary<'a> {
                 reason: e,
             })
             .transpose()
-    }
-}
-
-impl Default for Dictionary<'static> {
-    fn default() -> Self {
-        Self::new(include_str!("../default-dic.jsonl"))
     }
 }
 

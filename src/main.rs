@@ -1,4 +1,6 @@
-use niho::{converter::Converter, tokenizer::Tokenizer};
+use std::{borrow::Cow, path::PathBuf};
+
+use niho::{converter::Converter, dictionary::Dictionary, tokenizer::Tokenizer};
 use orfail::OrFail;
 
 fn main() -> noargs::Result<()> {
@@ -16,6 +18,12 @@ fn main() -> noargs::Result<()> {
         .short('t')
         .take(&mut args)
         .is_present();
+    let dictionary_file_path: Option<PathBuf> = noargs::opt("dictionary-file")
+        .short('d')
+        .ty("PATH")
+        .env("NIHO_DICTIONARY_FILE")
+        .take(&mut args)
+        .present_and_then(|a| a.value().parse())?;
     if let Some(help) = args.finish()? {
         print!("{help}");
         return Ok(());
@@ -29,6 +37,17 @@ fn main() -> noargs::Result<()> {
         }
         return Ok(());
     }
+
+    let dic_text = if let Some(path) = dictionary_file_path {
+        Cow::Owned(
+            std::fs::read_to_string(&path)
+                .or_fail_with(|e| format!("failed to read {}: {e}", path.display()))?,
+        )
+    } else {
+        Cow::Borrowed(Dictionary::DEFAULT)
+    };
+    let dic = Dictionary::new(&dic_text);
+    for _ in dic {}
 
     let converter = Converter::new();
     let result = converter.convert_tokens(tokens);
