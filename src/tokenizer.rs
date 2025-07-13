@@ -27,7 +27,7 @@ impl<'a> Tokenizer<'a> {
         let pos = self.text.find(pattern).unwrap_or(self.text.len());
         let text = &self.text[..pos];
         let is_kanji = self.text[pos..].starts_with('_');
-        self.text = &self.text[pos + 1..];
+        self.text = self.text[pos..].trim_start_matches('_');
         if is_kanji {
             Token::Kanji { text }
         } else if text
