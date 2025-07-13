@@ -3,12 +3,19 @@
 version = 4
 
 [[package]]
+name = "bitflags"
+version = "2.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
+
+[[package]]
 name = "niho"
 version = "0.1.0"
 dependencies = [
  "noargs",
  "nojson",
  "orfail",
+ "patricia_tree",
 ]
 
 [[package]]
@@ -28,3 +35,12 @@ name = "orfail"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aba2212a0fddd290c8209fb9b0393382435ede29c24a71f245d7fa92f0f3442e"
+
+[[package]]
+name = "patricia_tree"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "edb45b6331bbdbb54c9a29413703e892ab94f83a31e4a546c778495a91e7fbca"
+dependencies = [
+ "bitflags",
+]
