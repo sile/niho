@@ -42,8 +42,6 @@
 {"type": "hiragana", "from": "nu", "to": "ぬ"}
 {"type": "hiragana", "from": "ne", "to": "ね"}
 {"type": "hiragana", "from": "no", "to": "の"}
-{"type": "hiragana", "from": "n", "to": "ん"}
-{"type": "hiragana", "from": "nn", "to": "ん"}
 {"type": "hiragana", "from": "ha", "to": "は"}
 {"type": "hiragana", "from": "hi", "to": "ひ"}
 {"type": "hiragana", "from": "hu", "to": "ふ"}
@@ -77,6 +75,21 @@
 {"type": "hiragana", "from": "wi", "to": "ゐ"}
 {"type": "hiragana", "from": "we", "to": "ゑ"}
 {"type": "hiragana", "from": "wo", "to": "を"}
+{"type": "hiragana", "from": "n", "to": "ん"}
+{"type": "hiragana", "from": "nn", "to": "ん"}
+{"type": "hiragana", "from": "xa", "to": "ぁ"}
+{"type": "hiragana", "from": "xi", "to": "ぃ"}
+{"type": "hiragana", "from": "xu", "to": "ぅ"}
+{"type": "hiragana", "from": "xe", "to": "ぇ"}
+{"type": "hiragana", "from": "xo", "to": "ぉ"}
+{"type": "hiragana", "from": "xka", "to": "ゕ"}
+{"type": "hiragana", "from": "xke", "to": "ゖ"}
+{"type": "hiragana", "from": "xtu", "to": "っ"}
+{"type": "hiragana", "from": "xtsu", "to": "っ"}
+{"type": "hiragana", "from": "xya", "to": "ゃ"}
+{"type": "hiragana", "from": "xyu", "to": "ゅ"}
+{"type": "hiragana", "from": "xyo", "to": "ょ"}
+{"type": "hiragana", "from": "xwa", "to": "ゎ"}
 {"type": "hiragana", "from": "kya", "to": "きゃ"}
 {"type": "hiragana", "from": "kyu", "to": "きゅ"}
 {"type": "hiragana", "from": "kyo", "to": "きょ"}
@@ -84,25 +97,25 @@
 {"type": "hiragana", "from": "gyu", "to": "ぎゅ"}
 {"type": "hiragana", "from": "gyo", "to": "ぎょ"}
 {"type": "hiragana", "from": "sha", "to": "しゃ"}
-{"type": "hiragana", "from": "shu", "to": "しゅ"}
-{"type": "hiragana", "from": "sho", "to": "しょ"}
 {"type": "hiragana", "from": "sya", "to": "しゃ"}
+{"type": "hiragana", "from": "shu", "to": "しゅ"}
 {"type": "hiragana", "from": "syu", "to": "しゅ"}
+{"type": "hiragana", "from": "sho", "to": "しょ"}
 {"type": "hiragana", "from": "syo", "to": "しょ"}
 {"type": "hiragana", "from": "ja", "to": "じゃ"}
-{"type": "hiragana", "from": "ju", "to": "じゅ"}
-{"type": "hiragana", "from": "jo", "to": "じょ"}
 {"type": "hiragana", "from": "jya", "to": "じゃ"}
-{"type": "hiragana", "from": "jyu", "to": "じゅ"}
-{"type": "hiragana", "from": "jyo", "to": "じょ"}
 {"type": "hiragana", "from": "zya", "to": "じゃ"}
+{"type": "hiragana", "from": "ju", "to": "じゅ"}
+{"type": "hiragana", "from": "jyu", "to": "じゅ"}
 {"type": "hiragana", "from": "zyu", "to": "じゅ"}
+{"type": "hiragana", "from": "jo", "to": "じょ"}
+{"type": "hiragana", "from": "jyo", "to": "じょ"}
 {"type": "hiragana", "from": "zyo", "to": "じょ"}
 {"type": "hiragana", "from": "cha", "to": "ちゃ"}
-{"type": "hiragana", "from": "chu", "to": "ちゅ"}
-{"type": "hiragana", "from": "cho", "to": "ちょ"}
 {"type": "hiragana", "from": "tya", "to": "ちゃ"}
+{"type": "hiragana", "from": "chu", "to": "ちゅ"}
 {"type": "hiragana", "from": "tyu", "to": "ちゅ"}
+{"type": "hiragana", "from": "cho", "to": "ちょ"}
 {"type": "hiragana", "from": "tyo", "to": "ちょ"}
 {"type": "hiragana", "from": "dya", "to": "ぢゃ"}
 {"type": "hiragana", "from": "dyu", "to": "ぢゅ"}
@@ -125,6 +138,22 @@
 {"type": "hiragana", "from": "rya", "to": "りゃ"}
 {"type": "hiragana", "from": "ryu", "to": "りゅ"}
 {"type": "hiragana", "from": "ryo", "to": "りょ"}
+{"type": "hiragana", "from": "ss", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "kk", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "gg", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "zz", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "tt", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "dd", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "hh", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "ff", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "bb", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "pp", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "mm", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "yy", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "rr", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "ww", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "cc", "to": "っ", "consume_chars": 1}
+{"type": "hiragana", "from": "jj", "to": "っ", "consume_chars": 1}
 {"type": "hiragana", "from": ",", "to": "、"}
 {"type": "hiragana", "from": ".", "to": "。"}
 {"type": "hiragana", "from": "?", "to": "？"}
@@ -178,8 +207,6 @@
 {"type": "katakana", "from": "nu", "to": "ヌ"}
 {"type": "katakana", "from": "ne", "to": "ネ"}
 {"type": "katakana", "from": "no", "to": "ノ"}
-{"type": "katakana", "from": "n", "to": "ン"}
-{"type": "katakana", "from": "nn", "to": "ン"}
 {"type": "katakana", "from": "ha", "to": "ハ"}
 {"type": "katakana", "from": "hi", "to": "ヒ"}
 {"type": "katakana", "from": "hu", "to": "フ"}
@@ -213,6 +240,21 @@
 {"type": "katakana", "from": "wi", "to": "ヰ"}
 {"type": "katakana", "from": "we", "to": "ヱ"}
 {"type": "katakana", "from": "wo", "to": "ヲ"}
+{"type": "katakana", "from": "n", "to": "ン"}
+{"type": "katakana", "from": "nn", "to": "ン"}
+{"type": "katakana", "from": "xa", "to": "ァ"}
+{"type": "katakana", "from": "xi", "to": "ィ"}
+{"type": "katakana", "from": "xu", "to": "ゥ"}
+{"type": "katakana", "from": "xe", "to": "ェ"}
+{"type": "katakana", "from": "xo", "to": "ォ"}
+{"type": "katakana", "from": "xka", "to": "ヵ"}
+{"type": "katakana", "from": "xke", "to": "ヶ"}
+{"type": "katakana", "from": "xtu", "to": "ッ"}
+{"type": "katakana", "from": "xtsu", "to": "ッ"}
+{"type": "katakana", "from": "xya", "to": "ャ"}
+{"type": "katakana", "from": "xyu", "to": "ュ"}
+{"type": "katakana", "from": "xyo", "to": "ョ"}
+{"type": "katakana", "from": "xwa", "to": "ヮ"}
 {"type": "katakana", "from": "kya", "to": "キャ"}
 {"type": "katakana", "from": "kyu", "to": "キュ"}
 {"type": "katakana", "from": "kyo", "to": "キョ"}
@@ -220,25 +262,25 @@
 {"type": "katakana", "from": "gyu", "to": "ギュ"}
 {"type": "katakana", "from": "gyo", "to": "ギョ"}
 {"type": "katakana", "from": "sha", "to": "シャ"}
-{"type": "katakana", "from": "shu", "to": "シュ"}
-{"type": "katakana", "from": "sho", "to": "ショ"}
 {"type": "katakana", "from": "sya", "to": "シャ"}
+{"type": "katakana", "from": "shu", "to": "シュ"}
 {"type": "katakana", "from": "syu", "to": "シュ"}
+{"type": "katakana", "from": "sho", "to": "ショ"}
 {"type": "katakana", "from": "syo", "to": "ショ"}
 {"type": "katakana", "from": "ja", "to": "ジャ"}
-{"type": "katakana", "from": "ju", "to": "ジュ"}
-{"type": "katakana", "from": "jo", "to": "ジョ"}
 {"type": "katakana", "from": "jya", "to": "ジャ"}
-{"type": "katakana", "from": "jyu", "to": "ジュ"}
-{"type": "katakana", "from": "jyo", "to": "ジョ"}
 {"type": "katakana", "from": "zya", "to": "ジャ"}
+{"type": "katakana", "from": "ju", "to": "ジュ"}
+{"type": "katakana", "from": "jyu", "to": "ジュ"}
 {"type": "katakana", "from": "zyu", "to": "ジュ"}
+{"type": "katakana", "from": "jo", "to": "ジョ"}
+{"type": "katakana", "from": "jyo", "to": "ジョ"}
 {"type": "katakana", "from": "zyo", "to": "ジョ"}
 {"type": "katakana", "from": "cha", "to": "チャ"}
-{"type": "katakana", "from": "chu", "to": "チュ"}
-{"type": "katakana", "from": "cho", "to": "チョ"}
 {"type": "katakana", "from": "tya", "to": "チャ"}
+{"type": "katakana", "from": "chu", "to": "チュ"}
 {"type": "katakana", "from": "tyu", "to": "チュ"}
+{"type": "katakana", "from": "cho", "to": "チョ"}
 {"type": "katakana", "from": "tyo", "to": "チョ"}
 {"type": "katakana", "from": "dya", "to": "ヂャ"}
 {"type": "katakana", "from": "dyu", "to": "ヂュ"}
@@ -261,32 +303,6 @@
 {"type": "katakana", "from": "rya", "to": "リャ"}
 {"type": "katakana", "from": "ryu", "to": "リュ"}
 {"type": "katakana", "from": "ryo", "to": "リョ"}
-{"type": "katakana", "from": ",", "to": "、"}
-{"type": "katakana", "from": ".", "to": "。"}
-{"type": "katakana", "from": "?", "to": "？"}
-{"type": "katakana", "from": "!", "to": "！"}
-{"type": "katakana", "from": "-", "to": "ー"}
-{"type": "katakana", "from": "(", "to": "（"}
-{"type": "katakana", "from": ")", "to": "）"}
-{"type": "katakana", "from": "[", "to": "「"}
-{"type": "katakana", "from": "]", "to": "」"}
-{"type": "hiragana", "from": "ss", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "kk", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "gg", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "ss", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "zz", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "tt", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "dd", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "hh", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "ff", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "bb", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "pp", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "mm", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "yy", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "rr", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "ww", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "cc", "to": "っ", "consume_chars": 1}
-{"type": "hiragana", "from": "jj", "to": "っ", "consume_chars": 1}
 {"type": "katakana", "from": "kk", "to": "ッ", "consume_chars": 1}
 {"type": "katakana", "from": "gg", "to": "ッ", "consume_chars": 1}
 {"type": "katakana", "from": "ss", "to": "ッ", "consume_chars": 1}
@@ -303,29 +319,12 @@
 {"type": "katakana", "from": "ww", "to": "ッ", "consume_chars": 1}
 {"type": "katakana", "from": "cc", "to": "ッ", "consume_chars": 1}
 {"type": "katakana", "from": "jj", "to": "ッ", "consume_chars": 1}
-{"type": "hiragana", "from": "xa", "to": "ぁ"}
-{"type": "hiragana", "from": "xi", "to": "ぃ"}
-{"type": "hiragana", "from": "xu", "to": "ぅ"}
-{"type": "hiragana", "from": "xe", "to": "ぇ"}
-{"type": "hiragana", "from": "xo", "to": "ぉ"}
-{"type": "hiragana", "from": "xya", "to": "ゃ"}
-{"type": "hiragana", "from": "xyu", "to": "ゅ"}
-{"type": "hiragana", "from": "xyo", "to": "ょ"}
-{"type": "hiragana", "from": "xtu", "to": "っ"}
-{"type": "hiragana", "from": "xtsu", "to": "っ"}
-{"type": "hiragana", "from": "xwa", "to": "ゎ"}
-{"type": "hiragana", "from": "xke", "to": "ゖ"}
-{"type": "hiragana", "from": "xka", "to": "ゕ"}
-{"type": "katakana", "from": "xa", "to": "ァ"}
-{"type": "katakana", "from": "xi", "to": "ィ"}
-{"type": "katakana", "from": "xu", "to": "ゥ"}
-{"type": "katakana", "from": "xe", "to": "ェ"}
-{"type": "katakana", "from": "xo", "to": "ォ"}
-{"type": "katakana", "from": "xya", "to": "ャ"}
-{"type": "katakana", "from": "xyu", "to": "ュ"}
-{"type": "katakana", "from": "xyo", "to": "ョ"}
-{"type": "katakana", "from": "xtu", "to": "ッ"}
-{"type": "katakana", "from": "xtsu", "to": "ッ"}
-{"type": "katakana", "from": "xwa", "to": "ヮ"}
-{"type": "katakana", "from": "xke", "to": "ヶ"}
-{"type": "katakana", "from": "xka", "to": "ヵ"}
+{"type": "katakana", "from": ",", "to": "、"}
+{"type": "katakana", "from": ".", "to": "。"}
+{"type": "katakana", "from": "?", "to": "？"}
+{"type": "katakana", "from": "!", "to": "！"}
+{"type": "katakana", "from": "-", "to": "ー"}
+{"type": "katakana", "from": "(", "to": "（"}
+{"type": "katakana", "from": ")", "to": "）"}
+{"type": "katakana", "from": "[", "to": "「"}
+{"type": "katakana", "from": "]", "to": "」"}
