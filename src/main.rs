@@ -48,8 +48,10 @@ fn main() -> noargs::Result<()> {
     };
     let dic = Dictionary::new(&dic_text);
     let converter = Converter::new(dic).or_fail()?;
-    let result = converter.convert_tokens(tokens);
-    print!("{}", result);
+    for token in tokens {
+        converter.convert(std::io::stdout(), token).or_fail()?;
+    }
+    println!();
 
     Ok(())
 }
