@@ -30,7 +30,7 @@ impl<'a> Tokenizer<'a> {
         self.text = &self.text[pos + 1..];
         if is_kanji {
             Token::Kanji { text }
-        } else if text.starts_with(|c| matches!(c, 'A'..='Z')) {
+        } else if text.starts_with(|c: char| c.is_ascii_uppercase()) {
             Token::Katakana { text }
         } else {
             Token::Hiragana { text }
