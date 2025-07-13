@@ -22,7 +22,7 @@ impl<'a> Tokenizer<'a> {
         token
     }
 
-    fn take_hiragana_or_henkan_token(&mut self) -> Token<'a> {
+    fn take_hiragana_or_katakana_or_henkan_token(&mut self) -> Token<'a> {
         let pattern = |c: char| c == '_' || c.is_ascii_whitespace();
         let pos = self.text.find(pattern).unwrap_or(self.text.len());
         let text = &self.text[..pos];
@@ -30,6 +30,8 @@ impl<'a> Tokenizer<'a> {
         self.text = &self.text[pos + 1..];
         if is_henkan {
             Token::Henkan { text }
+        } else if text.starts_with(|c| matches!(c, 'A'..='Z')) {
+            Token::Katakana { text }
         } else {
             Token::Hiragana { text }
         }
@@ -50,7 +52,7 @@ impl<'a> Iterator for Tokenizer<'a> {
             self.text = s;
             Some(self.take_raw_token(|s| s.split_once(|c: char| c.is_ascii_whitespace())))
         } else {
-            Some(self.take_hiragana_or_henkan_token())
+            Some(self.take_hiragana_or_katakana_or_henkan_token())
         }
     }
 }
@@ -59,6 +61,7 @@ impl<'a> Iterator for Tokenizer<'a> {
 pub enum Token<'a> {
     Raw { text: &'a str },
     Hiragana { text: &'a str },
+    Katakana { text: &'a str },
     Henkan { text: &'a str },
 }
 
@@ -71,6 +74,10 @@ impl<'a> nojson::DisplayJson for Token<'a> {
             }
             Token::Hiragana { text } => {
                 f.member("type", "Hiragana")?;
+                f.member("text", text)
+            }
+            Token::Katakana { text } => {
+                f.member("type", "Katakana")?;
                 f.member("text", text)
             }
             Token::Henkan { text } => {
