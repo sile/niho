@@ -1,20 +1,83 @@
-use crate::tokenizer::Token;
-use std::collections::HashMap;
+use orfail::OrFail;
 
-pub struct Converter {
+use crate::{
+    dictionary::{Dictionary, DictionaryEntry, DictionaryString},
+    tokenizer::Token,
+};
+use std::{collections::HashMap, num::NonZeroUsize};
+
+#[derive(Debug, Default)]
+pub struct KanaConverter<'a> {
+    pub mappings: Vec<KanaMapping<'a>>,
+}
+
+impl<'a> KanaConverter<'a> {
+    pub fn insert_mapping(
+        &mut self,
+        from: DictionaryString<'a>,
+        to: DictionaryString<'a>,
+        consume_chars: Option<NonZeroUsize>,
+    ) {
+        self.mappings.push(KanaMapping {
+            from,
+            to,
+            consume_chars,
+        });
+    }
+
+    pub fn finish(&mut self) {
+        self.mappings.sort_by(|a, b| a.from.cmp(&b.from));
+    }
+}
+
+#[derive(Debug)]
+pub struct KanaMapping<'a> {
+    pub from: DictionaryString<'a>,
+    pub to: DictionaryString<'a>,
+    pub consume_chars: Option<NonZeroUsize>,
+}
+
+#[derive(Debug)]
+pub struct Converter<'a> {
+    hiragana: KanaConverter<'a>,
+    katakana: KanaConverter<'a>,
     hiragana_map: HashMap<&'static str, &'static str>,
     henkan_map: HashMap<&'static str, Vec<&'static str>>,
 }
 
-impl Converter {
-    pub fn new() -> Self {
-        Self {
+impl<'a> Converter<'a> {
+    pub fn new(dic: Dictionary<'a>) -> orfail::Result<Self> {
+        let mut hiragana = KanaConverter::default();
+        let mut katakana = KanaConverter::default();
+
+        for entry in dic {
+            let entry = entry.or_fail()?;
+            match entry {
+                DictionaryEntry::Hiragana {
+                    from,
+                    to,
+                    consume_chars,
+                } => hiragana.insert_mapping(from, to, consume_chars),
+                DictionaryEntry::Katakana {
+                    from,
+                    to,
+                    consume_chars,
+                } => katakana.insert_mapping(from, to, consume_chars),
+                DictionaryEntry::Henkan { from, to } => todo!(),
+            }
+        }
+        hiragana.finish();
+        katakana.finish();
+
+        Ok(Self {
+            hiragana,
+            katakana,
             hiragana_map: Self::build_hiragana_map(),
             henkan_map: Self::build_henkan_map(),
-        }
+        })
     }
 
-    pub fn convert_tokens<'a>(&self, tokens: impl Iterator<Item = Token<'a>>) -> String {
+    pub fn convert_tokens<'b>(&self, tokens: impl Iterator<Item = Token<'b>>) -> String {
         let mut result = String::new();
 
         for token in tokens {
@@ -26,7 +89,7 @@ impl Converter {
                     result.push_str(&self.convert_hiragana(text));
                 }
                 Token::Katakana { text } => {
-                    todo!();
+                    result.push_str(&self.convert_hiragana(text)); // TODO
                 }
                 Token::Henkan { text } => {
                     let index = 0; // todo
@@ -254,11 +317,5 @@ impl Converter {
         map.insert("ru", vec!["する", "くる", "ある"]);
 
         map
-    }
-}
-
-impl Default for Converter {
-    fn default() -> Self {
-        Self::new()
     }
 }

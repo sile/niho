@@ -47,9 +47,7 @@ fn main() -> noargs::Result<()> {
         Cow::Borrowed(Dictionary::DEFAULT)
     };
     let dic = Dictionary::new(&dic_text);
-    for _ in dic {}
-
-    let converter = Converter::new();
+    let converter = Converter::new(dic).or_fail()?;
     let result = converter.convert_tokens(tokens);
     print!("{}", result);
 
