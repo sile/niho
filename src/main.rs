@@ -53,7 +53,6 @@ fn main() -> noargs::Result<()> {
     for token in tokens {
         converter.convert(std::io::stdout(), token).or_fail()?;
     }
-    println!();
 
     Ok(())
 }
