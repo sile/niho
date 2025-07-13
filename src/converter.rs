@@ -94,9 +94,9 @@ impl<'a> KanaConverter<'a> {
                 }
             }
 
-            let (i, c) = s.char_indices().next().expect("infallible");
+            let c = s.chars().next().expect("infallible");
             write!(writer, "{c}").or_fail()?;
-            s = &s[i..];
+            s = &s[c.len_utf8()..];
         }
         Ok(())
     }
