@@ -16,6 +16,15 @@ nihoは、ローマ字を日本語に変換するためのツールです。
 
 ```console
 $ cargo install niho
+A command-line tool for converting romanized Japanese text to Japanese characters
+
+Usage: niho [OPTIONS]
+
+Options:
+      --version                Print version
+  -h, --help                   Print help ('--help' for full help, '-h' for summary)
+  -t, --tokenize               Output tokenized input as JSON instead of converting to Japanese
+  -d, --dictionary-file <PATH> Path to dictionary file [env: NIHO_DICTIONARY_FILE]
 ```
 
 ## Basic Syntax
@@ -54,4 +63,26 @@ $ echo ___English to ___ nihongo_ | niho
 English to 日本語
 ```
 
+## Dictionary Format
 
+The dictionary is stored in a JSONL (JSON Lines) format, where each line contains a JSON object representing a character or word mapping. The dictionary contains three types of entries:
+
+- **`hiragana`**: Maps romanized text to hiragana characters
+- **`katakana`**: Maps romanized text to katakana characters
+- **`kanji`**: Maps romanized words to kanji characters
+
+Example entries:
+```json
+{"type": "hiragana", "from": "ka", "to": "か"}
+{"type": "katakana", "from": "ka", "to": "カ"}
+{"type": "kanji", "from": "nihongo", "to": "日本語"}
+```
+
+The default dictionary can be found at [default-dic.jsonl](default-dic.jsonl).
+
+### Kanji and Unknown Word Handling
+
+For kanji conversion (text ending with `_`), the tool performs a direct dictionary lookup:
+
+- **Found words**: If the romanized text exists in the kanji dictionary, it's converted to the corresponding kanji (e.g., `nihongo_` → `日本語`)
+- **Unknown words**: If no mapping is found, the text is wrapped in angle brackets to indicate it's unrecognized (e.g., `unknown_` → `<unknown>`)
