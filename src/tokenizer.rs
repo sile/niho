@@ -69,19 +69,19 @@ impl<'a> nojson::DisplayJson for Token<'a> {
     fn fmt(&self, f: &mut nojson::JsonFormatter<'_, '_>) -> std::fmt::Result {
         f.object(|f| match self {
             Token::Raw { text } => {
-                f.member("type", "Raw")?;
+                f.member("type", "raw")?;
                 f.member("text", text)
             }
             Token::Hiragana { text } => {
-                f.member("type", "Hiragana")?;
+                f.member("type", "hiragana")?;
                 f.member("text", text)
             }
             Token::Katakana { text } => {
-                f.member("type", "Katakana")?;
+                f.member("type", "katakana")?;
                 f.member("text", text)
             }
             Token::Henkan { text } => {
-                f.member("type", "Henkan")?;
+                f.member("type", "henkan")?;
                 f.member("text", text)
             }
         })

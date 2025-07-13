@@ -1,1 +1,2 @@
-{"from": "a", "to": ["あ"]}
+{"type": "hiragana", "from": "a", "to": "あ"}
+{"type": "hiragana", "from": "i", "to": "い"}
