@@ -328,3 +328,6 @@
 {"type": "katakana", "from": ")", "to": "）"}
 {"type": "katakana", "from": "[", "to": "「"}
 {"type": "katakana", "from": "]", "to": "」"}
+{"type": "kanji", "from": "ji", "to": "字"}
+{"type": "kanji", "from": "nihongo", "to": "日本語"}
+{"type": "kanji", "from": "henkan", "to": "変換"}

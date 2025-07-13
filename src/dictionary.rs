@@ -18,11 +18,11 @@ impl<'a> Iterator for Dictionary<'a> {
     type Item = Result<DictionaryEntry<'a>, DictionaryError>;
 
     fn next(&mut self) -> Option<Self::Item> {
-        let (current, remaining) = self.text.split_once('\n').unwrap_or((self.text, ""));
-        self.text = remaining;
         if self.text.is_empty() {
             return None;
         }
+        let (current, remaining) = self.text.split_once('\n').unwrap_or((self.text, ""));
+        self.text = remaining;
 
         self.line += 1;
         DictionaryEntry::parse(current)
