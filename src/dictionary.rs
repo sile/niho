@@ -23,7 +23,13 @@ impl<'a> Iterator for Dictionary<'a> {
         }
 
         self.line += 1;
-        todo!()
+        DictionaryEntry::parse(current)
+            .map(Some)
+            .map_err(|e| DictionaryError {
+                line: self.line,
+                reason: e,
+            })
+            .transpose()
     }
 }
 
@@ -51,6 +57,44 @@ pub enum DictionaryEntry<'a> {
         from: DictionaryString<'a>,
         to: DictionaryString<'a>,
     },
+}
+
+impl<'a> DictionaryEntry<'a> {
+    fn parse(line: &'a str) -> Result<Self, nojson::JsonParseError> {
+        let json = nojson::RawJson::parse(line)?;
+        let value = json.value();
+        match value
+            .to_member("type")?
+            .required()?
+            .to_unquoted_string_str()?
+            .as_ref()
+        {
+            "hiragana" => Ok(Self::Hiragana {
+                from: value
+                    .to_member("from")?
+                    .required()?
+                    .to_unquoted_string_str()?,
+                to: value
+                    .to_member("to")?
+                    .required()?
+                    .to_unquoted_string_str()?,
+                consume_chars: value.to_member("consume_chars")?.try_into()?,
+            }),
+            "katakana" => Ok(Self::Katakana {
+                from: value
+                    .to_member("from")?
+                    .required()?
+                    .to_unquoted_string_str()?,
+                to: value
+                    .to_member("to")?
+                    .required()?
+                    .to_unquoted_string_str()?,
+                consume_chars: value.to_member("consume_chars")?.try_into()?,
+            }),
+            "henkan" => todo!(),
+            ty => Err(value.invalid(format!("unknown type: {ty:?}"))),
+        }
+    }
 }
 
 #[derive(Debug)]
