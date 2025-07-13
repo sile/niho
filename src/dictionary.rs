@@ -1,4 +1,8 @@
-use std::io::{BufRead, BufReader};
+use std::{
+    borrow::Cow,
+    io::{BufRead, BufReader},
+    num::NonZeroUsize,
+};
 
 #[derive(Debug)]
 pub struct Dictionary<R> {
@@ -33,11 +37,24 @@ impl Default for Dictionary<BufReader<&'static [u8]>> {
     }
 }
 
+pub type DictionaryString<'a> = Cow<'a, str>;
+
 #[derive(Debug)]
 pub enum DictionaryEntry {
-    Hiragana,
-    Katakana,
-    Henkan,
+    Hiragana {
+        from: String,
+        to: String,
+        consume_chars: Option<NonZeroUsize>,
+    },
+    Katakana {
+        from: String,
+        to: String,
+        consume_chars: Option<NonZeroUsize>,
+    },
+    Henkan {
+        from: String,
+        to: String,
+    },
 }
 
 #[derive(Debug)]
