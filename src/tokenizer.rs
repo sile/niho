@@ -17,7 +17,11 @@ impl<'a> Tokenizer<'a> {
         F: FnOnce(&'a str) -> Option<(&'a str, &'a str)>,
     {
         let (text, remaining) = split(self.text).unwrap_or((self.text, ""));
-        let token = Token::Raw { text };
+        let token = if text.is_empty() {
+            Token::Raw { text: " " }
+        } else {
+            Token::Raw { text }
+        };
         self.text = remaining;
         token
     }
