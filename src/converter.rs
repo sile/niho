@@ -49,7 +49,16 @@ impl<'a> Converter<'a> {
             Token::Raw { text } => write!(writer, "{text}").or_fail()?,
             Token::Hiragana { text } => self.hiragana.convert(writer, text).or_fail()?,
             Token::Katakana { text } => self.katakana.convert(writer, text).or_fail()?,
-            Token::Kanji { text, count } => self.kanji.convert(writer, text, count).or_fail()?,
+            Token::Kanji { text, count } => {
+                let mut hiragana_buffer = Vec::new();
+                self.hiragana
+                    .convert(&mut hiragana_buffer, text)
+                    .or_fail()?;
+                let hiragana_text = String::from_utf8(hiragana_buffer).or_fail()?;
+                self.kanji
+                    .convert(writer, &hiragana_text, count)
+                    .or_fail()?
+            }
         }
         Ok(())
     }
