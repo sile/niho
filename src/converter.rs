@@ -49,14 +49,14 @@ impl<'a> Converter<'a> {
             Token::Raw { text } => write!(writer, "{text}").or_fail()?,
             Token::Hiragana { text } => self.hiragana.convert(writer, text).or_fail()?,
             Token::Katakana { text } => self.katakana.convert(writer, text).or_fail()?,
-            Token::Kanji { text, count } => {
+            Token::Kanji { text, index, count } => {
                 let mut hiragana_buffer = Vec::new();
                 self.hiragana
                     .convert(&mut hiragana_buffer, text)
                     .or_fail()?;
                 let hiragana_text = String::from_utf8(hiragana_buffer).or_fail()?;
                 self.kanji
-                    .convert(writer, &hiragana_text, count)
+                    .convert(writer, &hiragana_text, index, count)
                     .or_fail()?
             }
         }
@@ -120,11 +120,11 @@ struct KanaMapping<'a> {
 
 #[derive(Debug, Default)]
 struct KanjiConverter<'a> {
-    mappings: HashMap<DictionaryString<'a>, DictionaryString<'a>>,
+    mappings: HashMap<DictionaryString<'a>, Vec<DictionaryString<'a>>>,
 }
 
 impl<'a> KanjiConverter<'a> {
-    fn insert_mapping(&mut self, from: DictionaryString<'a>, to: DictionaryString<'a>) {
+    fn insert_mapping(&mut self, from: DictionaryString<'a>, to: Vec<DictionaryString<'a>>) {
         self.mappings.insert(from, to);
     }
 
@@ -132,9 +132,10 @@ impl<'a> KanjiConverter<'a> {
         &self,
         mut writer: W,
         text: &str,
+        index: usize,
         count: Option<isize>,
     ) -> orfail::Result<()> {
-        if let Some(s) = self.mappings.get(text) {
+        if let Some(s) = self.mappings.get(text).and_then(|v| v.get(index)) {
             match count {
                 None => write!(writer, "{s}").or_fail()?,
                 Some(count) if count >= 0 => {

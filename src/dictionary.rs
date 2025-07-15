@@ -51,7 +51,7 @@ pub enum DictionaryEntry<'a> {
     },
     Kanji {
         from: DictionaryString<'a>,
-        to: DictionaryString<'a>,
+        to: Vec<DictionaryString<'a>>,
     },
 }
 
@@ -92,10 +92,7 @@ impl<'a> DictionaryEntry<'a> {
                     .to_member("from")?
                     .required()?
                     .to_unquoted_string_str()?,
-                to: value
-                    .to_member("to")?
-                    .required()?
-                    .to_unquoted_string_str()?,
+                to: value.to_member("to")?.required()?.try_into()?,
             }),
             ty => Err(value.invalid(format!("unknown type: {ty:?}"))),
         }

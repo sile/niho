@@ -31,8 +31,9 @@ impl<'a> Tokenizer<'a> {
         let pos = self.text.find(pattern).unwrap_or(self.text.len());
         let text = &self.text[..pos];
         let is_kanji = self.text[pos..].starts_with('_');
-        self.text = self.text[pos..].trim_start_matches('_');
         if is_kanji {
+            self.text = self.text[pos..].trim_start_matches('_');
+            let index = self.text[pos..].len() - self.text.len() - 1;
             let count = if let Some(pos) = self.text.find(|c: char| c != '-' && !c.is_ascii_digit())
                 && pos != 0
                 && let Ok(c) = self.text[..pos].parse()
@@ -42,7 +43,7 @@ impl<'a> Tokenizer<'a> {
             } else {
                 None
             };
-            Token::Kanji { text, count }
+            Token::Kanji { text, index, count }
         } else if text
             .trim_start_matches(|c: char| !c.is_ascii_alphabetic())
             .starts_with(|c: char| c.is_ascii_uppercase())
@@ -75,10 +76,20 @@ impl<'a> Iterator for Tokenizer<'a> {
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Token<'a> {
-    Raw { text: &'a str },
-    Hiragana { text: &'a str },
-    Katakana { text: &'a str },
-    Kanji { text: &'a str, count: Option<isize> },
+    Raw {
+        text: &'a str,
+    },
+    Hiragana {
+        text: &'a str,
+    },
+    Katakana {
+        text: &'a str,
+    },
+    Kanji {
+        text: &'a str,
+        index: usize,
+        count: Option<isize>,
+    },
 }
 
 impl<'a> nojson::DisplayJson for Token<'a> {
@@ -96,9 +107,10 @@ impl<'a> nojson::DisplayJson for Token<'a> {
                 f.member("type", "katakana")?;
                 f.member("text", text)
             }
-            Token::Kanji { text, count } => {
+            Token::Kanji { text, index, count } => {
                 f.member("type", "kanji")?;
                 f.member("text", text)?;
+                f.member("index", index)?;
                 if let Some(c) = count {
                     f.member("count", c)?;
                 }
