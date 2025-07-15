@@ -30,10 +30,9 @@ impl<'a> Tokenizer<'a> {
         let pattern = |c: char| c == '_' || c.is_ascii_whitespace();
         let pos = self.text.find(pattern).unwrap_or(self.text.len());
         let text = &self.text[..pos];
-        let is_kanji = self.text[pos..].starts_with('_');
-        if is_kanji {
-            self.text = self.text[pos..].trim_start_matches('_');
-            let index = self.text[pos..].len() - self.text.len() - 1;
+        let underscore_count = self.text[pos..].chars().take_while(|&c| c == '_').count();
+        self.text = &self.text[pos + underscore_count..];
+        if let Some(index) = underscore_count.checked_sub(1) {
             let count = if let Some(pos) = self.text.find(|c: char| c != '-' && !c.is_ascii_digit())
                 && pos != 0
                 && let Ok(c) = self.text[..pos].parse()
