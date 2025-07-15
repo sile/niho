@@ -49,7 +49,7 @@ impl<'a> Converter<'a> {
             Token::Raw { text } => write!(writer, "{text}").or_fail()?,
             Token::Hiragana { text } => self.hiragana.convert(writer, text).or_fail()?,
             Token::Katakana { text } => self.katakana.convert(writer, text).or_fail()?,
-            Token::Kanji { text } => self.kanji.convert(writer, text).or_fail()?,
+            Token::Kanji { text, count } => self.kanji.convert(writer, text, count).or_fail()?,
         }
         Ok(())
     }
@@ -119,9 +119,29 @@ impl<'a> KanjiConverter<'a> {
         self.mappings.insert(from, to);
     }
 
-    fn convert<W: Write>(&self, mut writer: W, text: &str) -> orfail::Result<()> {
+    fn convert<W: Write>(
+        &self,
+        mut writer: W,
+        text: &str,
+        count: Option<isize>,
+    ) -> orfail::Result<()> {
         if let Some(s) = self.mappings.get(text) {
-            write!(writer, "{s}").or_fail()?;
+            match count {
+                None => write!(writer, "{s}").or_fail()?,
+                Some(count) if count >= 0 => {
+                    for c in s.chars().take(count as usize) {
+                        write!(writer, "{c}").or_fail()?;
+                    }
+                }
+                Some(count) => {
+                    for c in s
+                        .chars()
+                        .skip(s.chars().count().saturating_sub(count.abs() as usize))
+                    {
+                        write!(writer, "{c}").or_fail()?;
+                    }
+                }
+            }
         } else {
             write!(writer, "<{text}>").or_fail()?;
         }
