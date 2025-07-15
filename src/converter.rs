@@ -136,7 +136,7 @@ impl<'a> KanjiConverter<'a> {
                 Some(count) => {
                     for c in s
                         .chars()
-                        .skip(s.chars().count().saturating_sub(count.abs() as usize))
+                        .skip(s.chars().count().saturating_sub(count.unsigned_abs()))
                     {
                         write!(writer, "{c}").or_fail()?;
                     }
