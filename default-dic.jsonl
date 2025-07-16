@@ -529,3 +529,4 @@
 {"type": "kanji", "from": "ようけん", "to": ["要件"]}
 {"type": "kanji", "from": "はんだん", "to": ["判断"]}
 {"type": "kanji", "from": "じゅうよう", "to": ["重要"]}
+{"type": "henkan", "from": "cat", "to": "🐱"}

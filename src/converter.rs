@@ -11,6 +11,7 @@ pub struct Converter<'a> {
     hiragana: KanaConverter<'a>,
     katakana: KanaConverter<'a>,
     kanji: KanjiConverter<'a>,
+    henkan: HenkanConverter<'a>,
 }
 
 impl<'a> Converter<'a> {
@@ -18,6 +19,7 @@ impl<'a> Converter<'a> {
         let mut hiragana = KanaConverter::default();
         let mut katakana = KanaConverter::default();
         let mut kanji = KanjiConverter::default();
+        let mut henkan = HenkanConverter::default();
         for entry in dic {
             let entry = entry.or_fail()?;
             match entry {
@@ -32,6 +34,7 @@ impl<'a> Converter<'a> {
                     consume_chars,
                 } => katakana.insert_mapping(from, to, consume_chars),
                 DictionaryEntry::Kanji { from, to } => kanji.insert_mapping(from, to),
+                DictionaryEntry::Henkan { from, to } => henkan.insert_mapping(from, to),
             }
         }
         hiragana.finish();
@@ -41,6 +44,7 @@ impl<'a> Converter<'a> {
             hiragana,
             katakana,
             kanji,
+            henkan,
         })
     }
 
@@ -59,6 +63,7 @@ impl<'a> Converter<'a> {
                     .convert(writer, &hiragana_text, index, count)
                     .or_fail()?
             }
+            Token::Henkan { text } => self.henkan.convert(writer, text).or_fail()?,
         }
         Ok(())
     }
@@ -152,6 +157,26 @@ impl<'a> KanjiConverter<'a> {
                     }
                 }
             }
+        } else {
+            write!(writer, "<{text}>").or_fail()?;
+        }
+        Ok(())
+    }
+}
+
+#[derive(Debug, Default)]
+struct HenkanConverter<'a> {
+    mappings: HashMap<DictionaryString<'a>, DictionaryString<'a>>,
+}
+
+impl<'a> HenkanConverter<'a> {
+    fn insert_mapping(&mut self, from: DictionaryString<'a>, to: DictionaryString<'a>) {
+        self.mappings.insert(from, to);
+    }
+
+    fn convert<W: Write>(&self, mut writer: W, text: &str) -> orfail::Result<()> {
+        if let Some(s) = self.mappings.get(text) {
+            write!(writer, "{s}").or_fail()?;
         } else {
             write!(writer, "<{text}>").or_fail()?;
         }
