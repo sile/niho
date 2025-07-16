@@ -8,22 +8,13 @@ impl<'a> Tokenizer<'a> {
         Self { text }
     }
 
-    fn skip_whitespaces(&mut self) {
-        self.text = self.text.trim_start();
-    }
-
     fn take_sonomama_token<F>(&mut self, split: F) -> Token<'a>
     where
         F: FnOnce(&'a str) -> Option<(&'a str, &'a str)>,
     {
         let (text, remaining) = split(self.text).unwrap_or((self.text, ""));
-        let token = if text.is_empty() {
-            Token::Sonomama { text: " " }
-        } else {
-            Token::Sonomama { text }
-        };
         self.text = remaining;
-        token
+        Token::Sonomama { text }
     }
 
     fn take_henkan_token<F>(&mut self, split: F) -> Token<'a>
@@ -41,6 +32,7 @@ impl<'a> Tokenizer<'a> {
         let text = &self.text[..pos];
         let underscore_count = self.text[pos..].chars().take_while(|&c| c == '_').count();
         self.text = &self.text[pos + underscore_count..];
+        self.text = self.text.strip_prefix(' ').unwrap_or(self.text);
         if let Some(index) = underscore_count.checked_sub(1) {
             let count = if let Some(pos) = self.text.find(|c: char| c != '-' && !c.is_ascii_digit())
                 && pos != 0
@@ -67,8 +59,12 @@ impl<'a> Iterator for Tokenizer<'a> {
     type Item = Token<'a>;
 
     fn next(&mut self) -> Option<Self::Item> {
-        self.skip_whitespaces();
-        if self.text.is_empty() {
+        if self.text.starts_with(|c: char| c.is_ascii_whitespace()) {
+            Some(self.take_sonomama_token(|s| {
+                s.find(|c: char| !c.is_ascii_whitespace())
+                    .map(|pos| s.split_at(pos))
+            }))
+        } else if self.text.is_empty() {
             None
         } else if let Some(s) = self.text.strip_prefix("___") {
             self.text = s;
@@ -140,5 +136,28 @@ impl<'a> nojson::DisplayJson for Token<'a> {
                 f.member("text", text)
             }
         })
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn whitespace_handling() {
+        let tokens = Tokenizer::new("  foo bar  baz ")
+            .map(text)
+            .collect::<Vec<_>>();
+        assert_eq!(tokens, ["  ", "foo", "bar", " ", "baz", " "]);
+    }
+
+    fn text<'a>(token: Token<'a>) -> &'a str {
+        match token {
+            Token::Sonomama { text }
+            | Token::Hiragana { text }
+            | Token::Katakana { text }
+            | Token::Kanji { text, .. }
+            | Token::Henkan { text } => text,
+        }
     }
 }
