@@ -530,3 +530,5 @@
 {"type": "kanji", "from": "はんだん", "to": ["判断"]}
 {"type": "kanji", "from": "じゅうよう", "to": ["重要"]}
 {"type": "henkan", "from": "cat", "to": "🐱"}
+{"type": "kanji", "from": "まい", "to": ["毎"]}
+{"type": "kanji", "from": "たんさく", "to": ["探索"]}
