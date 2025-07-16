@@ -12,15 +12,15 @@ impl<'a> Tokenizer<'a> {
         self.text = self.text.trim_start();
     }
 
-    fn take_raw_token<F>(&mut self, split: F) -> Token<'a>
+    fn take_sonomama_token<F>(&mut self, split: F) -> Token<'a>
     where
         F: FnOnce(&'a str) -> Option<(&'a str, &'a str)>,
     {
         let (text, remaining) = split(self.text).unwrap_or((self.text, ""));
         let token = if text.is_empty() {
-            Token::Raw { text: " " }
+            Token::Sonomama { text: " " }
         } else {
-            Token::Raw { text }
+            Token::Sonomama { text }
         };
         self.text = remaining;
         token
@@ -72,10 +72,10 @@ impl<'a> Iterator for Tokenizer<'a> {
             None
         } else if let Some(s) = self.text.strip_prefix("___") {
             self.text = s;
-            Some(self.take_raw_token(|s| s.split_once("___")))
+            Some(self.take_sonomama_token(|s| s.split_once("___")))
         } else if let Some(s) = self.text.strip_prefix('_') {
             self.text = s;
-            Some(self.take_raw_token(|s| s.split_once(|c: char| c.is_ascii_whitespace())))
+            Some(self.take_sonomama_token(|s| s.split_once(|c: char| c.is_ascii_whitespace())))
         } else if let Some(s) = self.text.strip_prefix(':') {
             self.text = s;
             Some(self.take_henkan_token(|s| s.split_once(|c: char| c.is_ascii_whitespace())))
@@ -87,7 +87,7 @@ impl<'a> Iterator for Tokenizer<'a> {
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Token<'a> {
-    Raw {
+    Sonomama {
         text: &'a str,
     },
     // Dictionary JSON: {"type": "hiragana", "from": "ka", "to": "か"}
@@ -114,8 +114,8 @@ pub enum Token<'a> {
 impl<'a> nojson::DisplayJson for Token<'a> {
     fn fmt(&self, f: &mut nojson::JsonFormatter<'_, '_>) -> std::fmt::Result {
         f.object(|f| match self {
-            Token::Raw { text } => {
-                f.member("type", "raw")?;
+            Token::Sonomama { text } => {
+                f.member("type", "sonomama")?;
                 f.member("text", text)
             }
             Token::Hiragana { text } => {

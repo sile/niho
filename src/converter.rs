@@ -50,7 +50,7 @@ impl<'a> Converter<'a> {
 
     pub fn convert<W: Write>(&self, mut writer: W, token: Token<'_>) -> orfail::Result<()> {
         match token {
-            Token::Raw { text } => write!(writer, "{text}").or_fail()?,
+            Token::Sonomama { text } => write!(writer, "{text}").or_fail()?,
             Token::Hiragana { text } => self.hiragana.convert(writer, text).or_fail()?,
             Token::Katakana { text } => self.katakana.convert(writer, text).or_fail()?,
             Token::Kanji { text, index, count } => {
