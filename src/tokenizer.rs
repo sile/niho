@@ -34,16 +34,7 @@ impl<'a> Tokenizer<'a> {
         self.text = &self.text[pos + underscore_count..];
         self.text = self.text.strip_prefix(' ').unwrap_or(self.text);
         if let Some(index) = underscore_count.checked_sub(1) {
-            let count = if let Some(pos) = self.text.find(|c: char| c != '-' && !c.is_ascii_digit())
-                && pos != 0
-                && let Ok(c) = self.text[..pos].parse()
-            {
-                self.text = &self.text[pos..];
-                Some(c)
-            } else {
-                None
-            };
-            Token::Kanji { text, index, count }
+            Token::Kanji { text, index }
         } else if text
             .trim_start_matches(|c: char| !c.is_ascii_alphabetic())
             .starts_with(|c: char| c.is_ascii_uppercase())
@@ -83,28 +74,16 @@ impl<'a> Iterator for Tokenizer<'a> {
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Token<'a> {
-    Sonomama {
-        text: &'a str,
-    },
+    Sonomama { text: &'a str },
     // Dictionary JSON: {"type": "hiragana", "from": "ka", "to": "か"}
-    Hiragana {
-        text: &'a str,
-    },
+    Hiragana { text: &'a str },
     // Dictionary JSON: {"type": "katakana", "from": "ka", "to": "カ"}
-    Katakana {
-        text: &'a str,
-    },
+    Katakana { text: &'a str },
     // Dictionary JSON: {"type": "kanji", "from": "にほんご", "to": ["日本語"]}
-    Kanji {
-        text: &'a str,
-        index: usize,
-        count: Option<isize>,
-    },
+    Kanji { text: &'a str, index: usize },
     // Dictionary JSON: {"type": "henkan", "from": "cat", "to": "🐱"}
     // Dictionary JSON: {"type": "henkan", "from": "memory", "to": "メモリー"}
-    Henkan {
-        text: &'a str,
-    },
+    Henkan { text: &'a str },
 }
 
 impl<'a> nojson::DisplayJson for Token<'a> {
@@ -122,14 +101,10 @@ impl<'a> nojson::DisplayJson for Token<'a> {
                 f.member("type", "katakana")?;
                 f.member("text", text)
             }
-            Token::Kanji { text, index, count } => {
+            Token::Kanji { text, index } => {
                 f.member("type", "kanji")?;
                 f.member("text", text)?;
-                f.member("index", index)?;
-                if let Some(c) = count {
-                    f.member("count", c)?;
-                }
-                Ok(())
+                f.member("index", index)
             }
             Token::Henkan { text } => {
                 f.member("type", "henkan")?;
@@ -145,10 +120,10 @@ mod tests {
 
     #[test]
     fn whitespace_handling() {
-        let tokens = Tokenizer::new("  foo bar  baz ")
+        let tokens = Tokenizer::new("  foo bar  baz\n")
             .map(text)
             .collect::<Vec<_>>();
-        assert_eq!(tokens, ["  ", "foo", "bar", " ", "baz", " "]);
+        assert_eq!(tokens, ["  ", "foo", "bar", " ", "baz", "\n"]);
     }
 
     fn text<'a>(token: Token<'a>) -> &'a str {

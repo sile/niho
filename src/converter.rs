@@ -53,14 +53,14 @@ impl<'a> Converter<'a> {
             Token::Sonomama { text } => write!(writer, "{text}").or_fail()?,
             Token::Hiragana { text } => self.hiragana.convert(writer, text).or_fail()?,
             Token::Katakana { text } => self.katakana.convert(writer, text).or_fail()?,
-            Token::Kanji { text, index, count } => {
+            Token::Kanji { text, index } => {
                 let mut hiragana_buffer = Vec::new();
                 self.hiragana
                     .convert(&mut hiragana_buffer, text)
                     .or_fail()?;
                 let hiragana_text = String::from_utf8(hiragana_buffer).or_fail()?;
                 self.kanji
-                    .convert(writer, &hiragana_text, index, count)
+                    .convert(writer, &hiragana_text, index)
                     .or_fail()?
             }
             Token::Henkan { text } => self.henkan.convert(writer, text).or_fail()?,
@@ -133,30 +133,9 @@ impl<'a> KanjiConverter<'a> {
         self.mappings.insert(from, to);
     }
 
-    fn convert<W: Write>(
-        &self,
-        mut writer: W,
-        text: &str,
-        index: usize,
-        count: Option<isize>,
-    ) -> orfail::Result<()> {
+    fn convert<W: Write>(&self, mut writer: W, text: &str, index: usize) -> orfail::Result<()> {
         if let Some(s) = self.mappings.get(text).and_then(|v| v.get(index)) {
-            match count {
-                None => write!(writer, "{s}").or_fail()?,
-                Some(count) if count >= 0 => {
-                    for c in s.chars().take(count as usize) {
-                        write!(writer, "{c}").or_fail()?;
-                    }
-                }
-                Some(count) => {
-                    for c in s
-                        .chars()
-                        .skip(s.chars().count().saturating_sub(count.unsigned_abs()))
-                    {
-                        write!(writer, "{c}").or_fail()?;
-                    }
-                }
-            }
+            write!(writer, "{s}").or_fail()?;
         } else {
             write!(writer, "<{text}>").or_fail()?;
         }
