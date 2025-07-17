@@ -768,3 +768,4 @@
 {"type": "kanji", "from": "ようきゅう", "to": ["要求"]}
 {"type": "kanji", "from": "へんどう", "to": ["変動"]}
 {"type": "kanji", "from": "こんなん", "to": ["困難"]}
+{"type": "henkan", "from": "struct", "to": "#[derive(Debug)]\nstruct\n{\n}\n"}
