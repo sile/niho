@@ -8,12 +8,15 @@ impl<'a> Tokenizer<'a> {
         Self { text }
     }
 
-    fn take_sonomama_token<F>(&mut self, split: F) -> Token<'a>
+    fn take_sonomama_token<F>(&mut self, remove_trailing_space: bool, split: F) -> Token<'a>
     where
         F: FnOnce(&'a str) -> Option<(&'a str, &'a str)>,
     {
         let (text, remaining) = split(self.text).unwrap_or((self.text, ""));
         self.text = remaining;
+        if remove_trailing_space {
+            self.text = self.text.strip_prefix(' ').unwrap_or(self.text);
+        }
         Token::Sonomama { text }
     }
 
@@ -50,20 +53,36 @@ impl<'a> Iterator for Tokenizer<'a> {
     type Item = Token<'a>;
 
     fn next(&mut self) -> Option<Self::Item> {
-        if self.text.starts_with(|c: char| c.is_ascii_whitespace()) {
-            Some(self.take_sonomama_token(|s| {
+        if self.text.is_empty() {
+            None
+        } else if self.text.starts_with(|c: char| c.is_ascii_whitespace()) {
+            Some(self.take_sonomama_token(false, |s| {
                 s.find(|c: char| !c.is_ascii_whitespace())
                     .map(|pos| s.split_at(pos))
             }))
-        } else if self.text.is_empty() {
-            None
+        } else if self.text.starts_with("```") {
+            Some(
+                self.take_sonomama_token(true, |s| {
+                    s[3..].find("```").map(|pos| s.split_at(pos + 6))
+                }),
+            )
+        } else if self.text.starts_with('`') {
+            Some(
+                self.take_sonomama_token(true, |s| s[1..].find('`').map(|pos| s.split_at(pos + 2))),
+            )
         } else if let Some(s) = self.text.strip_prefix("___") {
             self.text = s;
-            Some(self.take_sonomama_token(|s| s.split_once("___")))
+            Some(self.take_sonomama_token(true, |s| s.split_once("___")))
         } else if let Some(s) = self.text.strip_prefix('_') {
             self.text = s;
-            Some(self.take_sonomama_token(|s| s.split_once(|c: char| c.is_ascii_whitespace())))
-        } else if let Some(s) = self.text.strip_prefix(':') {
+            Some(
+                self.take_sonomama_token(false, |s| {
+                    s.split_once(|c: char| c.is_ascii_whitespace())
+                }),
+            )
+        } else if let Some(s) = self.text.strip_prefix(':')
+            && !self.text[1..].starts_with(|c: char| c.is_ascii_whitespace())
+        {
             self.text = s;
             Some(self.take_henkan_token(|s| s.split_once(|c: char| c.is_ascii_whitespace())))
         } else {
