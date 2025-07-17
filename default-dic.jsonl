@@ -196,6 +196,7 @@
 {"type": "katakana", "from": "tu", "to": "ツ"}
 {"type": "katakana", "from": "tsu", "to": "ツ"}
 {"type": "katakana", "from": "te", "to": "テ"}
+{"type": "katakana", "from": "thi", "to": "ティ"}
 {"type": "katakana", "from": "to", "to": "ト"}
 {"type": "katakana", "from": "da", "to": "ダ"}
 {"type": "katakana", "from": "di", "to": "ヂ"}
@@ -566,7 +567,7 @@
 {"type": "kanji", "from": "せきむ", "to": ["責務"]}
 {"type": "kanji", "from": "つぎ", "to": ["次"]}
 {"type": "kanji", "from": "ようご", "to": ["用語"]}
-{"type": "kanji", "from": "こしょう", "to": ["呼称"]}
+{"type": "kanji", "from": "こしょう", "to": ["呼称", "故障"]}
 {"type": "kanji", "from": "ひょうか", "to": ["評価"]}
 {"type": "kanji", "from": "さんこう", "to": ["参考"]}
 {"type": "kanji", "from": "りれき", "to": ["履歴"]}
@@ -758,3 +759,12 @@
 {"type": "kanji", "from": "さいていげん", "to": ["最低限"]}
 {"type": "kanji", "from": "かつよう", "to": ["活用"]}
 {"type": "kanji", "from": "ぶんせき", "to": ["分析"]}
+{"type": "kanji", "from": "へんか", "to": ["変化"]}
+{"type": "kanji", "from": "とく", "to": ["特"]}
+{"type": "kanji", "from": "こうちく", "to": ["構築"]}
+{"type": "kanji", "from": "したが", "to": ["従"]}
+{"type": "kanji", "from": "す", "to": ["済"]}
+{"type": "kanji", "from": "たいおう", "to": ["対応"]}
+{"type": "kanji", "from": "ようきゅう", "to": ["要求"]}
+{"type": "kanji", "from": "へんどう", "to": ["変動"]}
+{"type": "kanji", "from": "こんなん", "to": ["困難"]}
