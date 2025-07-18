@@ -22,6 +22,7 @@
 {"type": "hiragana", "from": "za", "to": "ざ"}
 {"type": "hiragana", "from": "zi", "to": "じ"}
 {"type": "hiragana", "from": "ji", "to": "じ"}
+{"type": "hiragana", "from": "je", "to": "じぇ"}
 {"type": "hiragana", "from": "zu", "to": "ず"}
 {"type": "hiragana", "from": "ze", "to": "ぜ"}
 {"type": "hiragana", "from": "zo", "to": "ぞ"}
@@ -187,6 +188,7 @@
 {"type": "katakana", "from": "za", "to": "ザ"}
 {"type": "katakana", "from": "zi", "to": "ジ"}
 {"type": "katakana", "from": "ji", "to": "ジ"}
+{"type": "katakana", "from": "je", "to": "ジェ"}
 {"type": "katakana", "from": "zu", "to": "ズ"}
 {"type": "katakana", "from": "ze", "to": "ゼ"}
 {"type": "katakana", "from": "zo", "to": "ゾ"}
@@ -356,7 +358,7 @@
 {"type": "kanji", "from": "てき", "to": ["的"]}
 {"type": "kanji", "from": "やくわり", "to": ["役割"]}
 {"type": "kanji", "from": "にな", "to": ["担"]}
-{"type": "kanji", "from": "しよう", "to": ["使用"]}
+{"type": "kanji", "from": "しよう", "to": ["使用", "仕様"]}
 {"type": "kanji", "from": "おさえ", "to": ["抑え"]}
 {"type": "kanji", "from": "せいのう", "to": ["性能"]}
 {"type": "kanji", "from": "うえ", "to": ["上"]}
@@ -782,3 +784,25 @@
 {"type": "kanji", "from": "かんがえ", "to": ["考え"]}
 {"type": "kanji", "from": "じゅん", "to": ["順"]}
 {"type": "kanji", "from": "きょよう", "to": ["許容"]}
+{"type": "kanji", "from": "にんい", "to": ["任意"]}
+{"type": "kanji", "from": "もじれつ", "to": ["文字列"]}
+{"type": "kanji", "from": "ひょうき", "to": ["表記"]}
+{"type": "kanji", "from": "うちがわ", "to": ["内側"]}
+{"type": "kanji", "from": "かへん", "to": ["可変"]}
+{"type": "kanji", "from": "げんきゅう", "to": ["言及"]}
+{"type": "kanji", "from": "せつめい", "to": ["説明"]}
+{"type": "kanji", "from": "みた", "to": ["満た"]}
+{"type": "kanji", "from": "ゆうこう", "to": ["有効"]}
+{"type": "kanji", "from": "ひっす", "to": ["必須"]}
+{"type": "kanji", "from": "ほうがん", "to": ["包含"]}
+{"type": "kanji", "from": "ぶんかつ", "to": ["分割"]}
+{"type": "kanji", "from": "ばん", "to": ["版"]}
+{"type": "kanji", "from": "こうしゃ", "to": ["後者"]}
+{"type": "kanji", "from": "りょうほう", "to": ["両方"]}
+{"type": "kanji", "from": "せんよう", "to": ["専用"]}
+{"type": "kanji", "from": "はいしん", "to": ["配信"]}
+{"type": "kanji", "from": "そんざい", "to": ["存在"]}
+{"type": "kanji", "from": "きかん", "to": ["期間"]}
+{"type": "kanji", "from": "まったく", "to": ["全く"]}
+{"type": "kanji", "from": "どうし", "to": ["同士"]}
+{"type": "kanji", "from": "みていぎ", "to": ["未定義"]}
