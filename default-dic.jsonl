@@ -769,3 +769,16 @@
 {"type": "kanji", "from": "へんどう", "to": ["変動"]}
 {"type": "kanji", "from": "こんなん", "to": ["困難"]}
 {"type": "henkan", "from": "struct", "to": "#[derive(Debug)]\nstruct\n{\n}\n"}
+{"type": "kanji", "from": "はか", "to": ["測"]}
+{"type": "kanji", "from": "しひょう", "to": ["指標"]}
+{"type": "kanji", "from": "すぎ", "to": ["過ぎ"]}
+{"type": "kanji", "from": "にんげん", "to": ["人間"]}
+{"type": "kanji", "from": "かんかく", "to": ["感覚"]}
+{"type": "kanji", "from": "ゆうぼう", "to": ["有望"]}
+{"type": "kanji", "from": "かん", "to": ["関"]}
+{"type": "kanji", "from": "わけ", "to": ["訳"]}
+{"type": "kanji", "from": "え", "to": ["得"]}
+{"type": "kanji", "from": "やくめ", "to": ["役目"]}
+{"type": "kanji", "from": "かんがえ", "to": ["考え"]}
+{"type": "kanji", "from": "じゅん", "to": ["順"]}
+{"type": "kanji", "from": "きょよう", "to": ["許容"]}
