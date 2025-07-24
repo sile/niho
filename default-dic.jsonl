@@ -771,6 +771,8 @@
 {"type": "kanji", "from": "へんどう", "to": ["変動"]}
 {"type": "kanji", "from": "こんなん", "to": ["困難"]}
 {"type": "henkan", "from": "struct", "to": "#[derive(Debug)]\nstruct\n{\n}\n"}
+{"type": "henkan", "from": "or", "to": "-> orfail::Result<()>"}
+{"type": "henkan", "from": "jr", "to": "-> Result<(), nojson::JsonParseError>"}
 {"type": "kanji", "from": "はか", "to": ["測"]}
 {"type": "kanji", "from": "しひょう", "to": ["指標"]}
 {"type": "kanji", "from": "すぎ", "to": ["過ぎ"]}
@@ -810,3 +812,8 @@
 {"type": "kanji", "from": "しょゆう", "to": ["所有"]}
 {"type": "kanji", "from": "けん", "to": ["権"]}
 {"type": "kanji", "from": "ほうき", "to": ["放棄"]}
+{"type": "kanji", "from": "そのた", "to": ["その他"]}
+{"type": "kanji", "from": "ぎょう", "to": ["行"]}
+{"type": "kanji", "from": "れつ", "to": ["列"]}
+{"type": "kanji", "from": "がいねん", "to": ["概念"]}
+{"type": "kanji", "from": "じこく", "to": ["時刻"]}
