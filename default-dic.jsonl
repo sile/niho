@@ -514,7 +514,7 @@
 {"type": "kanji", "from": "なかみ", "to": ["中身"]}
 {"type": "kanji", "from": "ちゅうしん", "to": ["中心"]}
 {"type": "kanji", "from": "あ", "to": ["合"]}
-{"type": "kanji", "from": "ま", "to": ["増"]}
+{"type": "kanji", "from": "ま", "to": ["増", "待"]}
 {"type": "kanji", "from": "わり", "to": ["割"]}
 {"type": "kanji", "from": "つね", "to": ["常"]}
 {"type": "kanji", "from": "はっこう", "to": ["発行"]}
@@ -717,7 +717,7 @@
 {"type": "kanji", "from": "うんよう", "to": ["運用"]}
 {"type": "kanji", "from": "せいし", "to": ["静止"]}
 {"type": "kanji", "from": "が", "to": ["画"]}
-{"type": "kanji", "from": "ひ", "to": ["非"]}
+{"type": "kanji", "from": "ひ", "to": ["非", "引"]}
 {"type": "kanji", "from": "げんじつ", "to": ["現実"]}
 {"type": "kanji", "from": "いみ", "to": ["意味"]}
 {"type": "kanji", "from": "せんとう", "to": ["先頭"]}
@@ -817,3 +817,29 @@
 {"type": "kanji", "from": "れつ", "to": ["列"]}
 {"type": "kanji", "from": "がいねん", "to": ["概念"]}
 {"type": "kanji", "from": "じこく", "to": ["時刻"]}
+{"type": "kanji", "from": "ひどうき", "to": ["非同期"]}
+{"type": "kanji", "from": "どうき", "to": ["同期"]}
+{"type": "kanji", "from": "わ", "to": ["分"]}
+{"type": "kanji", "from": "ひりつ", "to": ["比率"]}
+{"type": "kanji", "from": "さいだい", "to": ["最大"]}
+{"type": "kanji", "from": "そうにゅう", "to": ["挿入"]}
+{"type": "kanji", "from": "わくせん", "to": ["枠線"]}
+{"type": "kanji", "from": "かさん", "to": ["加算"]}
+{"type": "kanji", "from": "びょうが", "to": ["描画"]}
+{"type": "kanji", "from": "はば", "to": ["幅"]}
+{"type": "kanji", "from": "りょういき", "to": ["領域"]}
+{"type": "kanji", "from": "しゅるい", "to": ["種類"]}
+{"type": "kanji", "from": "くろ", "to": ["黒"]}
+{"type": "kanji", "from": "わく", "to": ["枠"]}
+{"type": "kanji", "from": "きすう", "to": ["奇数"]}
+{"type": "kanji", "from": "ぐうすう", "to": ["偶数"]}
+{"type": "kanji", "from": "まる", "to": ["丸"]}
+{"type": "kanji", "from": "ほん", "to": ["本"]}
+{"type": "kanji", "from": "がいせつ", "to": ["概説"]}
+{"type": "kanji", "from": "じゅんじょ", "to": ["順序"]}
+{"type": "kanji", "from": "かさな", "to": ["重な"]}
+{"type": "kanji", "from": "ぜんめん", "to": ["前面"]}
+{"type": "kanji", "from": "しゃく", "to": ["尺"]}
+{"type": "kanji", "from": "きろく", "to": ["記録"]}
+{"type": "kanji", "from": "ふくげん", "to": ["復元"]}
+{"type": "kanji", "from": "けんとう", "to": ["検討"]}
