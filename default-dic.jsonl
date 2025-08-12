@@ -848,6 +848,13 @@
 {"type": "kanji", "from": "こうぞうたい", "to": ["構造体"]}
 {"type": "kanji", "from": "さいしょう", "to": ["最小"]}
 {"type": "kanji", "from": "こうぶん", "to": ["構文"]}
-{"type": "kanji", "from": "はじ", "to": ["始"]}
+{"type": "kanji", "from": "はじ", "to": ["始", "弾"]}
 {"type": "kanji", "from": "てんけい", "to": ["典型"]}
 {"type": "kanji", "from": "だいにゅう", "to": ["代入"]}
+{"type": "kanji", "from": "うめ", "to": ["埋め"]}
+{"type": "kanji", "from": "かくちょうし", "to": ["拡張子"]}
+{"type": "kanji", "from": "ぞうげん", "to": ["増減"]}
+{"type": "kanji", "from": "そと", "to": ["外"]}
+{"type": "kanji", "from": "おぼえ", "to": ["覚え"]}
+{"type": "kanji", "from": "きょうゆう", "to": ["共有"]}
+{"type": "kanji", "from": "しんき", "to": ["新規"]}
