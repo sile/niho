@@ -199,6 +199,7 @@
 {"type": "katakana", "from": "tsu", "to": "ツ"}
 {"type": "katakana", "from": "te", "to": "テ"}
 {"type": "katakana", "from": "thi", "to": "ティ"}
+{"type": "katakana", "from": "the", "to": "チェ"}
 {"type": "katakana", "from": "to", "to": "ト"}
 {"type": "katakana", "from": "da", "to": "ダ"}
 {"type": "katakana", "from": "di", "to": "ヂ"}
@@ -858,3 +859,12 @@
 {"type": "kanji", "from": "おぼえ", "to": ["覚え"]}
 {"type": "kanji", "from": "きょうゆう", "to": ["共有"]}
 {"type": "kanji", "from": "しんき", "to": ["新規"]}
+{"type": "kanji", "from": "ようそ", "to": ["要素"]}
+{"type": "kanji", "from": "せんけい", "to": ["線形"]}
+{"type": "kanji", "from": "いっかつ", "to": ["一括"]}
+{"type": "kanji", "from": "せいせい", "to": ["生成"]}
+{"type": "kanji", "from": "さいてい", "to": ["最低"]}
+{"type": "kanji", "from": "よ", "to": ["呼"]}
+{"type": "kanji", "from": "ぜんてい", "to": ["前提"]}
+{"type": "kanji", "from": "ぼうとう", "to": ["冒頭"]}
+{"type": "kanji", "from": "はんてい", "to": ["判定"]}
