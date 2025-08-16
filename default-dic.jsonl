@@ -585,7 +585,7 @@
 {"type": "kanji", "from": "ていぎ", "to": ["定義"]}
 {"type": "kanji", "from": "きほん", "to": ["基本"]}
 {"type": "kanji", "from": "ひょうじ", "to": ["表示"]}
-{"type": "kanji", "from": "み", "to": ["見"]}
+{"type": "kanji", "from": "み", "to": ["見", "未"]}
 {"type": "kanji", "from": "しゅうごう", "to": ["集合"]}
 {"type": "kanji", "from": "とお", "to": ["通"]}
 {"type": "henkan", "from": "i", "to": "- "}
@@ -868,3 +868,10 @@
 {"type": "kanji", "from": "ぜんてい", "to": ["前提"]}
 {"type": "kanji", "from": "ぼうとう", "to": ["冒頭"]}
 {"type": "kanji", "from": "はんてい", "to": ["判定"]}
+{"type": "kanji", "from": "かかわ", "to": ["関わ"]}
+{"type": "kanji", "from": "かくとく", "to": ["獲得"]}
+{"type": "kanji", "from": "ふ", "to": ["不"]}
+{"type": "kanji", "from": "けいこく", "to": ["警告"]}
+{"type": "kanji", "from": "だ", "to": ["出"]}
+{"type": "kanji", "from": "いちじ", "to": ["一時"]}
+{"type": "kanji", "from": "ふる", "to": ["古"]}
