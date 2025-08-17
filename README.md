@@ -37,7 +37,6 @@ Options:
 - **Capitalized text**: Converted to katakana (e.g., `Ko-hi-` → `コーヒー`)
 - **Text ending with `_`**: Converted to kanji using dictionary lookup (e.g., `nihongo_` → `日本語`)
 - **Text ending with multiple `_`**: Select specific kanji from multiple candidates (e.g., `ka__` → second kanji option for "ka")
-- **Text wrapped in `___`**: Kept as raw text without conversion (e.g., `___Hello___` → `Hello`)
 - **Text prefixed with `_`**: Kept as raw text until whitespace (e.g., `_Hello desu` → `Hello です`)
 - **Text prefixed with `:`**: Special conversion using henkan dictionary (e.g., `:cat` → `🐱`)
 - **Code blocks**: Text wrapped in `` ` `` or ``` ``` ``` is kept as-is
@@ -71,7 +70,7 @@ $ echo watashi ha Ko-hi- wo nomimasu | niho
 わたしはコーヒーをのみます
 
 # Keep raw text
-$ echo ___English to ___ nihongo_ | niho
+$ echo '_English  _to  nihongo_' | niho
 English to 日本語
 
 # Preserve code blocks

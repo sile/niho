@@ -70,9 +70,6 @@ impl<'a> Iterator for Tokenizer<'a> {
             Some(
                 self.take_sonomama_token(true, |s| s[1..].find('`').map(|pos| s.split_at(pos + 2))),
             )
-        } else if let Some(s) = self.text.strip_prefix("___") {
-            self.text = s;
-            Some(self.take_sonomama_token(true, |s| s.split_once("___")))
         } else if let Some(s) = self.text.strip_prefix('_') {
             self.text = s;
             Some(
