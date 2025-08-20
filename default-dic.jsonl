@@ -73,8 +73,8 @@
 {"type": "hiragana", "from": "re", "to": "れ"}
 {"type": "hiragana", "from": "ro", "to": "ろ"}
 {"type": "hiragana", "from": "wa", "to": "わ"}
-{"type": "hiragana", "from": "wi", "to": "ゐ"}
-{"type": "hiragana", "from": "we", "to": "ゑ"}
+{"type": "hiragana", "from": "wi", "to": "うぃ"}
+{"type": "hiragana", "from": "we", "to": "うぇ"}
 {"type": "hiragana", "from": "wo", "to": "を"}
 {"type": "hiragana", "from": "n", "to": "ん"}
 {"type": "hiragana", "from": "nn", "to": "ん"}
@@ -245,8 +245,8 @@
 {"type": "katakana", "from": "re", "to": "レ"}
 {"type": "katakana", "from": "ro", "to": "ロ"}
 {"type": "katakana", "from": "wa", "to": "ワ"}
-{"type": "katakana", "from": "wi", "to": "ヰ"}
-{"type": "katakana", "from": "we", "to": "ヱ"}
+{"type": "katakana", "from": "wi", "to": "ウィ"}
+{"type": "katakana", "from": "we", "to": "ウェ"}
 {"type": "katakana", "from": "wo", "to": "ヲ"}
 {"type": "katakana", "from": "n", "to": "ン"}
 {"type": "katakana", "from": "nn", "to": "ン"}
@@ -882,3 +882,5 @@
 {"type": "kanji", "from": "はいれつ", "to": ["配列"]}
 {"type": "kanji", "from": "まつび", "to": ["末尾"]}
 {"type": "kanji", "from": "たっし", "to": ["達し"]}
+{"type": "kanji", "from": "にんしょう", "to": ["認証"]}
+{"type": "kanji", "from": "はら", "to": ["払"]}
