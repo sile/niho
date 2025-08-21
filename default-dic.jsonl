@@ -733,7 +733,6 @@
 {"type": "kanji", "from": "し", "to": ["知"]}
 {"type": "kanji", "from": "かくじつ", "to": ["確実"]}
 {"type": "kanji", "from": "ひきすう", "to": ["引数"]}
-{"type": "kanji", "from": "かえ", "to": ["変え"]}
 {"type": "kanji", "from": "ぜんかい", "to": ["前回"]}
 {"type": "kanji", "from": "べんり", "to": ["便利"]}
 {"type": "kanji", "from": "ひきつ", "to": ["引き継"]}
@@ -905,3 +904,12 @@
 {"type": "kanji", "from": "しゅどう", "to": ["手動"]}
 {"type": "kanji", "from": "ていし", "to": ["停止"]}
 {"type": "kanji", "from": "きょうごう", "to": ["競合"]}
+{"type": "kanji", "from": "とうたつ", "to": ["到達"]}
+{"type": "kanji", "from": "ちょうか", "to": ["超過"]}
+{"type": "kanji", "from": "げんざい", "to": ["現在"]}
+{"type": "kanji", "from": "そろ", "to": ["揃"]}
+{"type": "kanji", "from": "から", "to": ["空"]}
+{"type": "kanji", "from": "まえ", "to": ["前"]}
+{"type": "kanji", "from": "きょくたん", "to": ["極端"]}
+{"type": "kanji", "from": "かえ", "to": ["変え", "返"]}
+{"type": "kanji", "from": "たま", "to": ["溜ま", "貯ま"]}
