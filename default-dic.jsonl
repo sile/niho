@@ -121,6 +121,7 @@
 {"type": "hiragana", "from": "dya", "to": "ぢゃ"}
 {"type": "hiragana", "from": "dyu", "to": "ぢゅ"}
 {"type": "hiragana", "from": "dyo", "to": "ぢょ"}
+{"type": "hiragana", "from": "dhu", "to": "でゅ"}
 {"type": "hiragana", "from": "nya", "to": "にゃ"}
 {"type": "hiragana", "from": "nyu", "to": "にゅ"}
 {"type": "hiragana", "from": "nyo", "to": "にょ"}
@@ -294,6 +295,7 @@
 {"type": "katakana", "from": "dyu", "to": "ヂュ"}
 {"type": "katakana", "from": "dyo", "to": "ヂョ"}
 {"type": "katakana", "from": "dhi", "to": "ディ"}
+{"type": "katakana", "from": "dhu", "to": "デュ"}
 {"type": "katakana", "from": "nya", "to": "ニャ"}
 {"type": "katakana", "from": "nyu", "to": "ニュ"}
 {"type": "katakana", "from": "nyo", "to": "ニョ"}
@@ -916,3 +918,13 @@
 {"type": "kanji", "from": "かいぜん", "to": ["改善"]}
 {"type": "kanji", "from": "かたほう", "to": ["片方"]}
 {"type": "kanji", "from": "さいご", "to": ["最後"]}
+{"type": "kanji", "from": "かくし", "to": ["隠し"]}
+{"type": "kanji", "from": "へんすう", "to": ["変数"]}
+{"type": "kanji", "from": "じょうげん", "to": ["上限"]}
+{"type": "kanji", "from": "しょうひ", "to": ["消費"]}
+{"type": "kanji", "from": "そうしん", "to": ["送信"]}
+{"type": "kanji", "from": "こうほ", "to": ["候補"]}
+{"type": "kanji", "from": "たいき", "to": ["待機"]}
+{"type": "kanji", "from": "にゅうしゅつりょく", "to": ["入出力"]}
+{"type": "kanji", "from": "たんとう", "to": ["担当"]}
+{"type": "kanji", "from": "ばんごう", "to": ["番号"]}
