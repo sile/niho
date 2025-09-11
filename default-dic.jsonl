@@ -430,7 +430,6 @@
 {"type": "kanji", "from": "のぞ", "to": ["望"]}
 {"type": "kanji", "from": "りゆう", "to": ["理由"]}
 {"type": "kanji", "from": "ちが", "to": ["違"]}
-{"type": "kanji", "from": "まわ", "to": ["周"]}
 {"type": "kanji", "from": "かんり", "to": ["管理"]}
 {"type": "kanji", "from": "ふくざつ", "to": ["複雑"]}
 {"type": "kanji", "from": "あた", "to": ["辺"]}
@@ -871,7 +870,6 @@
 {"type": "kanji", "from": "はんてい", "to": ["判定"]}
 {"type": "kanji", "from": "かかわ", "to": ["関わ"]}
 {"type": "kanji", "from": "かくとく", "to": ["獲得"]}
-{"type": "kanji", "from": "ふ", "to": ["不"]}
 {"type": "kanji", "from": "けいこく", "to": ["警告"]}
 {"type": "kanji", "from": "だ", "to": ["出"]}
 {"type": "kanji", "from": "いちじ", "to": ["一時"]}
@@ -1014,3 +1012,14 @@
 {"type": "kanji", "from": "じゅうだい", "to": ["重大"]}
 {"type": "kanji", "from": "かんじ", "to": ["感じ"]}
 {"type": "kanji", "from": "ひょうげん", "to": ["表現"]}
+{"type": "kanji", "from": "かはんすう", "to": ["過半数"]}
+{"type": "kanji", "from": "まわ", "to": ["周", "回"]}
+{"type": "kanji", "from": "かわ", "to": ["代わ"]}
+{"type": "kanji", "from": "こえ", "to": ["越え"]}
+{"type": "kanji", "from": "うま", "to": ["上手"]}
+{"type": "kanji", "from": "かよう", "to": ["可用"]}
+{"type": "kanji", "from": "ふ", "to": ["増", "不"]}
+{"type": "kanji", "from": "ふせ", "to": ["防"]}
+{"type": "kanji", "from": "ふか", "to": ["負荷"]}
+{"type": "kanji", "from": "さいしょうげん", "to": ["最小限"]}
+{"type": "kanji", "from": "しゅほう", "to": ["手法"]}
