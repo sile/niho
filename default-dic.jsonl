@@ -201,6 +201,7 @@
 {"type": "katakana", "from": "te", "to": "テ"}
 {"type": "katakana", "from": "thi", "to": "ティ"}
 {"type": "katakana", "from": "the", "to": "チェ"}
+{"type": "katakana", "from": "tye", "to": "チェ"}
 {"type": "katakana", "from": "to", "to": "ト"}
 {"type": "katakana", "from": "da", "to": "ダ"}
 {"type": "katakana", "from": "di", "to": "ヂ"}
@@ -388,7 +389,6 @@
 {"type": "kanji", "from": "はなし", "to": ["話"]}
 {"type": "kanji", "from": "たんじゅん", "to": ["単純"]}
 {"type": "kanji", "from": "さい", "to": ["際", "差異"]}
-{"type": "kanji", "from": "いがい", "to": ["以外"]}
 {"type": "kanji", "from": "こうりょ", "to": ["考慮"]}
 {"type": "kanji", "from": "おおい", "to": ["多い"]}
 {"type": "kanji", "from": "こうりつ", "to": ["効率"]}
@@ -780,7 +780,6 @@
 {"type": "kanji", "from": "にんげん", "to": ["人間"]}
 {"type": "kanji", "from": "かんかく", "to": ["感覚"]}
 {"type": "kanji", "from": "ゆうぼう", "to": ["有望"]}
-{"type": "kanji", "from": "かん", "to": ["関"]}
 {"type": "kanji", "from": "わけ", "to": ["訳"]}
 {"type": "kanji", "from": "え", "to": ["得"]}
 {"type": "kanji", "from": "やくめ", "to": ["役目"]}
@@ -1023,3 +1022,27 @@
 {"type": "kanji", "from": "ふか", "to": ["負荷"]}
 {"type": "kanji", "from": "さいしょうげん", "to": ["最小限"]}
 {"type": "kanji", "from": "しゅほう", "to": ["手法"]}
+{"type": "kanji", "from": "よやく", "to": ["予約"]}
+{"type": "kanji", "from": "しょうとつ", "to": ["衝突"]}
+{"type": "kanji", "from": "ごかん", "to": ["互換"]}
+{"type": "kanji", "from": "たび", "to": ["度"]}
+{"type": "kanji", "from": "じゅうふく", "to": ["重複"]}
+{"type": "kanji", "from": "めん", "to": ["面"]}
+{"type": "kanji", "from": "かそう", "to": ["仮想"]}
+{"type": "kanji", "from": "かいわ", "to": ["会話"]}
+{"type": "kanji", "from": "どくりつ", "to": ["独立"]}
+{"type": "kanji", "from": "ゆうり", "to": ["有利"]}
+{"type": "kanji", "from": "こうじゅつ", "to": ["後述"]}
+{"type": "kanji", "from": "いがい", "to": ["以外", "意外"]}
+{"type": "kanji", "from": "せつ", "to": ["節"]}
+{"type": "kanji", "from": "かん", "to": ["関", "感"]}
+{"type": "kanji", "from": "むり", "to": ["無理"]}
+{"type": "kanji", "from": "ほんとう", "to": ["本当"]}
+{"type": "kanji", "from": "に", "to": ["似"]}
+{"type": "kanji", "from": "ふまえ", "to": ["踏まえ"]}
+{"type": "kanji", "from": "ふたん", "to": ["負担"]}
+{"type": "kanji", "from": "じつよう", "to": ["実用"]}
+{"type": "kanji", "from": "じょう", "to": ["上"]}
+{"type": "kanji", "from": "せいしつ", "to": ["性質"]}
+{"type": "kanji", "from": "きぼ", "to": ["規模"]}
+{"type": "kanji", "from": "けっきょく", "to": ["結局"]}
