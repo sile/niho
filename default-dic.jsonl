@@ -367,7 +367,6 @@
 {"type": "kanji", "from": "せいのう", "to": ["性能"]}
 {"type": "kanji", "from": "うえ", "to": ["上"]}
 {"type": "kanji", "from": "りてん", "to": ["利点"]}
-{"type": "kanji", "from": "か", "to": ["書", "掛"]}
 {"type": "kanji", "from": "こうせい", "to": ["構成"]}
 {"type": "kanji", "from": "と", "to": ["取"]}
 {"type": "kanji", "from": "ついか", "to": ["追加"]}
@@ -655,7 +654,6 @@
 {"type": "kanji", "from": "ひととおり", "to": ["一通り"]}
 {"type": "kanji", "from": "そろえ", "to": ["揃え"]}
 {"type": "kanji", "from": "ていき", "to": ["定期"]}
-{"type": "kanji", "from": "いこう", "to": ["以降"]}
 {"type": "kanji", "from": "さくい", "to": ["作為"]}
 {"type": "kanji", "from": "けんしょう", "to": ["検証"]}
 {"type": "kanji", "from": "そうとう", "to": ["相当"]}
@@ -1074,3 +1072,13 @@
 {"type": "kanji", "from": "ぜんだん", "to": ["前段"]}
 {"type": "kanji", "from": "うけ", "to": ["受け"]}
 {"type": "kanji", "from": "ぶんり", "to": ["分離"]}
+{"type": "kanji", "from": "ぶんしょう", "to": ["文書"]}
+{"type": "kanji", "from": "ふくさよう", "to": ["副作用"]}
+{"type": "kanji", "from": "かんりゃく", "to": ["簡略"]}
+{"type": "kanji", "from": "つうち", "to": ["通知"]}
+{"type": "kanji", "from": "か", "to": ["書", "掛", "化"]}
+{"type": "kanji", "from": "たて", "to": ["立て"]}
+{"type": "kanji", "from": "いこう", "to": ["以降", "移行"]}
+{"type": "kanji", "from": "まt", "to": ["待"]}
+{"type": "kanji", "from": "てきとう", "to": ["適当"]}
+{"type": "kanji", "from": "しょき", "to": ["初期"]}
