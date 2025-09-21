@@ -714,7 +714,6 @@
 {"type": "kanji", "from": "あやま", "to": ["誤"]}
 {"type": "kanji", "from": "きたい", "to": ["期待"]}
 {"type": "kanji", "from": "うんよう", "to": ["運用"]}
-{"type": "kanji", "from": "せいし", "to": ["静止"]}
 {"type": "kanji", "from": "が", "to": ["画"]}
 {"type": "kanji", "from": "ひ", "to": ["非", "引"]}
 {"type": "kanji", "from": "げんじつ", "to": ["現実"]}
@@ -969,7 +968,6 @@
 {"type": "kanji", "from": "じゅんばん", "to": ["順番"]}
 {"type": "kanji", "from": "ならびか", "to": ["並び替"]}
 {"type": "kanji", "from": "えられ", "to": ["得られ"]}
-{"type": "kanji", "from": "いじょう", "to": ["委譲"]}
 {"type": "kanji", "from": "てんそう", "to": ["転送"]}
 {"type": "kanji", "from": "ちえん", "to": ["遅延"]}
 {"type": "kanji", "from": "もうけ", "to": ["設け"]}
@@ -1112,3 +1110,17 @@
 {"type": "kanji", "from": "さい", "to": ["際", "差異", "再"]}
 {"type": "kanji", "from": "ふっき", "to": ["復帰"]}
 {"type": "kanji", "from": "せっけい", "to": ["設計"]}
+{"type": "kanji", "from": "めいじ", "to": ["明示"]}
+{"type": "kanji", "from": "せいぞん", "to": ["生存"]}
+{"type": "kanji", "from": "せいし", "to": ["静止", "生死"]}
+{"type": "kanji", "from": "かんせつ", "to": ["間接"]}
+{"type": "kanji", "from": "かんてん", "to": ["観点"]}
+{"type": "kanji", "from": "わる", "to": ["悪"]}
+{"type": "kanji", "from": "とういつ", "to": ["統一"]}
+{"type": "kanji", "from": "こうたい", "to": ["交代"]}
+{"type": "kanji", "from": "しょうがい", "to": ["障害"]}
+{"type": "kanji", "from": "おくれ", "to": ["遅れ"]}
+{"type": "kanji", "from": "あいて", "to": ["相手"]}
+{"type": "kanji", "from": "はんすう", "to": ["半数"]}
+{"type": "kanji", "from": "いじょう", "to": ["委譲", "以上"]}
+{"type": "kanji", "from": "そくざ", "to": ["即座"]}
