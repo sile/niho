@@ -387,7 +387,6 @@
 {"type": "kanji", "from": "かのう", "to": ["可能"]}
 {"type": "kanji", "from": "はなし", "to": ["話"]}
 {"type": "kanji", "from": "たんじゅん", "to": ["単純"]}
-{"type": "kanji", "from": "さい", "to": ["際", "差異"]}
 {"type": "kanji", "from": "こうりょ", "to": ["考慮"]}
 {"type": "kanji", "from": "おおい", "to": ["多い"]}
 {"type": "kanji", "from": "こうりつ", "to": ["効率"]}
@@ -1096,3 +1095,20 @@
 {"type": "kanji", "from": "ぜんしゃ", "to": ["前者"]}
 {"type": "kanji", "from": "たよう", "to": ["多用"]}
 {"type": "kanji", "from": "ふり", "to": ["不利"]}
+{"type": "kanji", "from": "といあわ", "to": ["問い合わ"]}
+{"type": "kanji", "from": "おそれ", "to": ["恐れ"]}
+{"type": "kanji", "from": "おおはば", "to": ["大幅"]}
+{"type": "kanji", "from": "だいいち", "to": ["第一"]}
+{"type": "kanji", "from": "ほじ", "to": ["保持"]}
+{"type": "kanji", "from": "きえ", "to": ["消え"]}
+{"type": "kanji", "from": "いき", "to": ["生き"]}
+{"type": "kanji", "from": "さいわい", "to": ["幸い"]}
+{"type": "kanji", "from": "こんかい", "to": ["今回"]}
+{"type": "kanji", "from": "ちょう", "to": ["長"]}
+{"type": "kanji", "from": "おんけい", "to": ["恩恵"]}
+{"type": "kanji", "from": "ぶんだん", "to": ["分断"]}
+{"type": "kanji", "from": "かいふく", "to": ["回復"]}
+{"type": "kanji", "from": "しょうしつ", "to": ["消失"]}
+{"type": "kanji", "from": "さい", "to": ["際", "差異", "再"]}
+{"type": "kanji", "from": "ふっき", "to": ["復帰"]}
+{"type": "kanji", "from": "せっけい", "to": ["設計"]}
