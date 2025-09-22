@@ -1069,7 +1069,6 @@
 {"type": "kanji", "from": "ぜんだん", "to": ["前段"]}
 {"type": "kanji", "from": "うけ", "to": ["受け"]}
 {"type": "kanji", "from": "ぶんり", "to": ["分離"]}
-{"type": "kanji", "from": "ぶんしょう", "to": ["文書"]}
 {"type": "kanji", "from": "ふくさよう", "to": ["副作用"]}
 {"type": "kanji", "from": "かんりゃく", "to": ["簡略"]}
 {"type": "kanji", "from": "つうち", "to": ["通知"]}
@@ -1122,5 +1121,20 @@
 {"type": "kanji", "from": "おくれ", "to": ["遅れ"]}
 {"type": "kanji", "from": "あいて", "to": ["相手"]}
 {"type": "kanji", "from": "はんすう", "to": ["半数"]}
-{"type": "kanji", "from": "いじょう", "to": ["委譲", "以上"]}
+{"type": "kanji", "from": "いじょう", "to": ["委譲", "以上", "異常"]}
 {"type": "kanji", "from": "そくざ", "to": ["即座"]}
+{"type": "kanji", "from": "ぶんしょう", "to": ["文章"]}
+{"type": "kanji", "from": "りゅうよう", "to": ["流用"]}
+{"type": "kanji", "from": "おちい", "to": ["陥"]}
+{"type": "kanji", "from": "いっけん", "to": ["一見"]}
+{"type": "kanji", "from": "じみ", "to": ["地味"]}
+{"type": "kanji", "from": "たんぽ", "to": ["担保"]}
+{"type": "kanji", "from": "ほんしょ", "to": ["本書"]}
+{"type": "kanji", "from": "とどめ", "to": ["留め"]}
+{"type": "kanji", "from": "どくじ", "to": ["独自"]}
+{"type": "kanji", "from": "くふう", "to": ["工夫"]}
+{"type": "kanji", "from": "こら", "to": ["凝"]}
+{"type": "kanji", "from": "どくしゃ", "to": ["読者"]}
+{"type": "kanji", "from": "しらべ", "to": ["調べ"]}
+{"type": "kanji", "from": "おもしろ", "to": ["面白"]}
+{"type": "kanji", "from": "たえ", "to": ["耐え", "堪え"]}
