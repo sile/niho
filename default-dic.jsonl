@@ -1008,7 +1008,6 @@
 {"type": "kanji", "from": "ひょうげん", "to": ["表現"]}
 {"type": "kanji", "from": "かはんすう", "to": ["過半数"]}
 {"type": "kanji", "from": "まわ", "to": ["周", "回"]}
-{"type": "kanji", "from": "かわ", "to": ["代わ"]}
 {"type": "kanji", "from": "こえ", "to": ["越え"]}
 {"type": "kanji", "from": "うま", "to": ["上手"]}
 {"type": "kanji", "from": "かよう", "to": ["可用"]}
@@ -1138,3 +1137,17 @@
 {"type": "kanji", "from": "しらべ", "to": ["調べ"]}
 {"type": "kanji", "from": "おもしろ", "to": ["面白"]}
 {"type": "kanji", "from": "たえ", "to": ["耐え", "堪え"]}
+{"type": "kanji", "from": "じょきょ", "to": ["除去"]}
+{"type": "kanji", "from": "なお", "to": ["直"]}
+{"type": "kanji", "from": "しん", "to": ["新"]}
+{"type": "kanji", "from": "げんご", "to": ["言語"]}
+{"type": "kanji", "from": "きりかえ", "to": ["切り替え"]}
+{"type": "kanji", "from": "め", "to": ["目"]}
+{"type": "kanji", "from": "そうい", "to": ["相違"]}
+{"type": "kanji", "from": "はいし", "to": ["廃止"]}
+{"type": "kanji", "from": "かわ", "to": ["代わ", "変わ", "替わ"]}
+{"type": "kanji", "from": "さいよう", "to": ["採用"]}
+{"type": "kanji", "from": "すいしょう", "to": ["推奨"]}
+{"type": "kanji", "from": "よてい", "to": ["予定"]}
+{"type": "kanji", "from": "こうはん", "to": ["後半"]}
+{"type": "kanji", "from": "ちょうき", "to": ["長期"]}
