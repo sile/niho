@@ -983,7 +983,6 @@
 {"type": "kanji", "from": "せん", "to": ["線"]}
 {"type": "kanji", "from": "はい", "to": ["入"]}
 {"type": "kanji", "from": "しけん", "to": ["試験"]}
-{"type": "kanji", "from": "だい", "to": ["第"]}
 {"type": "kanji", "from": "しょうかい", "to": ["紹介"]}
 {"type": "kanji", "from": "はた", "to": ["果た"]}
 {"type": "kanji", "from": "はんざつ", "to": ["煩雑"]}
@@ -1209,3 +1208,15 @@
 {"type": "kanji", "from": "せいやく", "to": ["制約"]}
 {"type": "kanji", "from": "にん", "to": ["人"]}
 {"type": "kanji", "from": "たいりょう", "to": ["大量"]}
+{"type": "kanji", "from": "だい", "to": ["第", "台", "大"]}
+{"type": "kanji", "from": "きんとう", "to": ["均等"]}
+{"type": "kanji", "from": "はいぶん", "to": ["配分"]}
+{"type": "kanji", "from": "ちゅうけい", "to": ["中継"]}
+{"type": "kanji", "from": "だいひょう", "to": ["代表"]}
+{"type": "kanji", "from": "ししょう", "to": ["支障"]}
+{"type": "kanji", "from": "いし", "to": ["意思"]}
+{"type": "kanji", "from": "しゅうちゅう", "to": ["集中"]}
+{"type": "kanji", "from": "りにかな", "to": ["理にかな"]}
+{"type": "kanji", "from": "さぐ", "to": ["探"]}
+{"type": "kanji", "from": "こうかい", "to": ["公開"]}
+{"type": "kanji", "from": "ていすう", "to": ["定数"]}
