@@ -1012,7 +1012,6 @@
 {"type": "kanji", "from": "かよう", "to": ["可用"]}
 {"type": "kanji", "from": "ふ", "to": ["増", "不"]}
 {"type": "kanji", "from": "ふせ", "to": ["防"]}
-{"type": "kanji", "from": "ふか", "to": ["負荷"]}
 {"type": "kanji", "from": "さいしょうげん", "to": ["最小限"]}
 {"type": "kanji", "from": "しゅほう", "to": ["手法"]}
 {"type": "kanji", "from": "よやく", "to": ["予約"]}
@@ -1253,3 +1252,22 @@
 {"type": "kanji", "from": "あたま", "to": ["頭"]}
 {"type": "kanji", "from": "かたすみ", "to": ["片隅"]}
 {"type": "kanji", "from": "お", "to": ["置"]}
+{"type": "kanji", "from": "またg", "to": ["跨"]}
+{"type": "kanji", "from": "けいか", "to": ["経過"]}
+{"type": "kanji", "from": "ふか", "to": ["負荷", "不可"]}
+{"type": "kanji", "from": "そなえ", "to": ["備え"]}
+{"type": "kanji", "from": "ていねい", "to": ["丁寧"]}
+{"type": "kanji", "from": "きょうせい", "to": ["強制"]}
+{"type": "kanji", "from": "きゅう", "to": ["旧"]}
+{"type": "kanji", "from": "うつ", "to": ["移"]}
+{"type": "kanji", "from": "きょうつう", "to": ["共通"]}
+{"type": "kanji", "from": "きょだい", "to": ["巨大"]}
+{"type": "kanji", "from": "ふかかい", "to": ["不可解"]}
+{"type": "kanji", "from": "びょう", "to": ["秒"]}
+{"type": "kanji", "from": "あんもく", "to": ["暗黙"]}
+{"type": "kanji", "from": "うち", "to": ["内"]}
+{"type": "kanji", "from": "かいひ", "to": ["回避"]}
+{"type": "kanji", "from": "ぎょうぎ", "to": ["行儀"]}
+{"type": "kanji", "from": "ろんぶん", "to": ["論文"]}
+{"type": "kanji", "from": "うわまわ", "to": ["上回"]}
+{"type": "kanji", "from": "さいじゅうよう", "to": ["最重要"]}
