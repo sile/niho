@@ -815,7 +815,6 @@
 {"type": "kanji", "from": "じこく", "to": ["時刻"]}
 {"type": "kanji", "from": "ひどうき", "to": ["非同期"]}
 {"type": "kanji", "from": "どうき", "to": ["同期"]}
-{"type": "kanji", "from": "わ", "to": ["分"]}
 {"type": "kanji", "from": "ひりつ", "to": ["比率"]}
 {"type": "kanji", "from": "さいだい", "to": ["最大"]}
 {"type": "kanji", "from": "そうにゅう", "to": ["挿入"]}
@@ -877,7 +876,6 @@
 {"type": "kanji", "from": "まつび", "to": ["末尾"]}
 {"type": "kanji", "from": "たっし", "to": ["達し"]}
 {"type": "kanji", "from": "にんしょう", "to": ["認証"]}
-{"type": "kanji", "from": "はら", "to": ["払"]}
 {"type": "kanji", "from": "ほか", "to": ["他"]}
 {"type": "kanji", "from": "せつぞく", "to": ["接続"]}
 {"type": "kanji", "from": "いじ", "to": ["維持"]}
@@ -1271,3 +1269,28 @@
 {"type": "kanji", "from": "ろんぶん", "to": ["論文"]}
 {"type": "kanji", "from": "うわまわ", "to": ["上回"]}
 {"type": "kanji", "from": "さいじゅうよう", "to": ["最重要"]}
+{"type": "kanji", "from": "しぜん", "to": ["自然"]}
+{"type": "kanji", "from": "にわとり", "to": ["鶏"]}
+{"type": "kanji", "from": "たまご", "to": ["卵"]}
+{"type": "kanji", "from": "びみょう", "to": ["微妙"]}
+{"type": "kanji", "from": "はら", "to": ["払", "孕"]}
+{"type": "kanji", "from": "じしん", "to": ["自身"]}
+{"type": "kanji", "from": "みち", "to": ["道", "未知"]}
+{"type": "kanji", "from": "ふれ", "to": ["触れ"]}
+{"type": "kanji", "from": "ばしょ", "to": ["場所"]}
+{"type": "kanji", "from": "きかい", "to": ["機会", "機械"]}
+{"type": "kanji", "from": "わ", "to": ["分", "割"]}
+{"type": "kanji", "from": "ちゅうとはんぱ", "to": ["中途半端"]}
+{"type": "kanji", "from": "いちあん", "to": ["一案"]}
+{"type": "kanji", "from": "ぶんみゃく", "to": ["文脈"]}
+{"type": "kanji", "from": "げきてき", "to": ["劇的"]}
+{"type": "kanji", "from": "とうひょう", "to": ["投票"]}
+{"type": "kanji", "from": "たいせい", "to": ["耐性"]}
+{"type": "kanji", "from": "だいすう", "to": ["台数"]}
+{"type": "kanji", "from": "きよ", "to": ["寄与"]}
+{"type": "kanji", "from": "いぎ", "to": ["意義"]}
+{"type": "kanji", "from": "ふめい", "to": ["不明"]}
+{"type": "kanji", "from": "ゆうえき", "to": ["有益"]}
+{"type": "kanji", "from": "あたえ", "to": ["与え"]}
+{"type": "kanji", "from": "とつぜん", "to": ["突然"]}
+{"type": "kanji", "from": "じかんたい", "to": ["時間帯"]}
