@@ -1040,7 +1040,6 @@
 {"type": "kanji", "from": "れんけい", "to": ["連携"]}
 {"type": "kanji", "from": "ぶんたん", "to": ["分担"]}
 {"type": "kanji", "from": "くみこみ", "to": ["組み込み"]}
-{"type": "kanji", "from": "かた", "to": ["方"]}
 {"type": "kanji", "from": "だとう", "to": ["妥当"]}
 {"type": "kanji", "from": "きびし", "to": ["厳し"]}
 {"type": "kanji", "from": "ぶんさん", "to": ["分散"]}
@@ -1307,3 +1306,8 @@
 {"type": "kanji", "from": "ぜんご", "to": ["前後"]}
 {"type": "kanji", "from": "すす", "to": ["進"]}
 {"type": "kanji", "from": "ちょっきん", "to": ["直近"]}
+{"type": "kanji", "from": "いっき", "to": ["一気"]}
+{"type": "kanji", "from": "あg", "to": ["上"]}
+{"type": "kanji", "from": "たいへん", "to": ["大変"]}
+{"type": "kanji", "from": "おえ", "to": ["終え"]}
+{"type": "kanji", "from": "かた", "to": ["方", "型"]}
