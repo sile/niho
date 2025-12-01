@@ -132,7 +132,7 @@ impl<'a> KanjiConverter<'a> {
         if let Some(s) = self.mappings.get(text).and_then(|v| v.get(index)) {
             write!(writer, "{s}").or_fail()?;
         } else {
-            write!(writer, "{text}_{}", "_".repeat(index)).or_fail()?;
+            write!(writer, " {text}_{} ", "_".repeat(index)).or_fail()?;
         }
         Ok(())
     }
