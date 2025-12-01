@@ -7,7 +7,7 @@ pub struct Dictionary<'a> {
 }
 
 impl<'a> Dictionary<'a> {
-    pub const DEFAULT: &'static str = include_str!("../dictionaries/default.jsonl");
+    pub const DEFAULT: &'static str = include_str!("../dics/default.jsonl");
 
     pub fn new(text: &'a str) -> Self {
         Self { text, line: 0 }

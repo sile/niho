@@ -8,7 +8,7 @@ niho
 `niho` is a command-line tool for converting romanized Japanese text to Japanese characters.
 
 ```console
-$ echo _niho ha, Ro-ma ji_ wo nihongo_ni henkan_surutameno Tu-ru desu. | niho
+$ echo _niho ha, Ro-ma ji_ wo nihongo_ni henkan_surutameno Tu-ru desu. | niho -d dics/sile.jsonl
 nihoは、ローマ字を日本語に変換するためのツールです。
 ```
 
