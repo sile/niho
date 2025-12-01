@@ -83,7 +83,7 @@ Example entries:
 {"type": "kanji", "from": "にほんご", "to": ["日本語"]}
 ```
 
-The default dictionary can be found at [default-dic.jsonl](default-dic.jsonl).
+The default dictionary can be found at [dictionaries/default.jsonl](dictionaries/default.jsonl).
 
 ### Kanji and Unknown Word Handling
 
