@@ -51,16 +51,6 @@ impl<'a> Iterator for Tokenizer<'a> {
                 s.find(|c: char| !c.is_ascii_whitespace())
                     .map(|pos| s.split_at(pos))
             }))
-        } else if self.text.starts_with("```") {
-            Some(
-                self.take_sonomama_token(true, |s| {
-                    s[3..].find("```").map(|pos| s.split_at(pos + 6))
-                }),
-            )
-        } else if self.text.starts_with('`') {
-            Some(
-                self.take_sonomama_token(true, |s| s[1..].find('`').map(|pos| s.split_at(pos + 2))),
-            )
         } else if let Some(s) = self.text.strip_prefix('_') {
             self.text = s;
             Some(
