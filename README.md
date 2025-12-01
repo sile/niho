@@ -92,4 +92,5 @@ For kanji conversion (text ending with `_`), the tool performs the following pro
 1. **Romanized → Hiragana**: First converts the romanized text to hiragana
 2. **Hiragana → Kanji**: Then looks up the hiragana in the kanji dictionary
 3. **Multiple Options**: If multiple kanji options exist, use additional `_` to select (e.g., `ka_` for first option, `ka__` for second)
-4. **Unknown words**: If no mapping is found, the text is wrapped in angle brackets to indicate it's unrecognized (e.g., `unknown_` → `<unknown>`)
+4. **Unknown words**: If no mapping is found in the kanji dictionary, the hiragana-converted text is output with trailing underscores matching the selection index (e.g., `unknown_` → `うんkのwん_`)
+
