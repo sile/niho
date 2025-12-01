@@ -8,15 +8,12 @@ impl<'a> Tokenizer<'a> {
         Self { text }
     }
 
-    fn take_sonomama_token<F>(&mut self, remove_trailing_space: bool, split: F) -> Token<'a>
+    fn take_sonomama_token<F>(&mut self, split: F) -> Token<'a>
     where
         F: FnOnce(&'a str) -> Option<(&'a str, &'a str)>,
     {
         let (text, remaining) = split(self.text).unwrap_or((self.text, ""));
         self.text = remaining;
-        if remove_trailing_space {
-            self.text = self.text.strip_prefix(' ').unwrap_or(self.text);
-        }
         Token::Sonomama { text }
     }
 
@@ -47,17 +44,13 @@ impl<'a> Iterator for Tokenizer<'a> {
         if self.text.is_empty() {
             None
         } else if self.text.starts_with(|c: char| c.is_ascii_whitespace()) {
-            Some(self.take_sonomama_token(false, |s| {
+            Some(self.take_sonomama_token(|s| {
                 s.find(|c: char| !c.is_ascii_whitespace())
                     .map(|pos| s.split_at(pos))
             }))
         } else if let Some(s) = self.text.strip_prefix('_') {
             self.text = s;
-            Some(
-                self.take_sonomama_token(false, |s| {
-                    s.split_once(|c: char| c.is_ascii_whitespace())
-                }),
-            )
+            Some(self.take_sonomama_token(|s| s.split_once(|c: char| c.is_ascii_whitespace())))
         } else {
             Some(self.take_hiragana_or_katakana_token())
         }
