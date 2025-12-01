@@ -38,7 +38,7 @@ Options:
 - **Text ending with `_`**: Converted to kanji using dictionary lookup (e.g., `nihongo_` → `日本語`)
 - **Text ending with multiple `_`**: Select specific kanji from multiple candidates (e.g., `ka__` → second kanji option for "ka")
 - **Text prefixed with `_`**: Kept as raw text until whitespace (e.g., `_Hello desu` → `Helloです`)
-- **Whitespace**: Preserved as-is in output
+- **Whitespace**: A whitespace immediately following a non-whitespace character is removed; all other whitespace is preserved as-is in output
 
 ### Examples
 
