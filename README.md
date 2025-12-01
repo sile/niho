@@ -38,7 +38,6 @@ Options:
 - **Text ending with `_`**: Converted to kanji using dictionary lookup (e.g., `nihongo_` → `日本語`)
 - **Text ending with multiple `_`**: Select specific kanji from multiple candidates (e.g., `ka__` → second kanji option for "ka")
 - **Text prefixed with `_`**: Kept as raw text until whitespace (e.g., `_Hello desu` → `Hello です`)
-- **Code blocks**: Text wrapped in `` ` `` or ``` ``` ``` is kept as-is
 - **Whitespace**: Preserved as-is in output
 
 ### Examples
@@ -67,10 +66,6 @@ $ echo watashi ha Ko-hi- wo nomimasu | niho
 # Keep raw text
 $ echo '_English  _to  nihongo_' | niho
 English to 日本語
-
-# Preserve code blocks
-$ echo "Use `cargo install niho` to install" | niho
-Use `cargo install niho` to install
 ```
 
 ## Dictionary Format
