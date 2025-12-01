@@ -26,10 +26,7 @@ impl<'a> Tokenizer<'a> {
         self.text = self.text.strip_prefix(' ').unwrap_or(self.text);
         if let Some(index) = underscore_count.checked_sub(1) {
             Token::Kanji { text, index }
-        } else if text
-            .trim_start_matches(|c: char| !c.is_ascii_alphabetic())
-            .starts_with(|c: char| c.is_ascii_uppercase())
-        {
+        } else if text.starts_with(|c: char| c.is_ascii_uppercase()) {
             Token::Katakana { text }
         } else {
             Token::Hiragana { text }
