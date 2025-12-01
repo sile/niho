@@ -38,7 +38,6 @@ Options:
 - **Text ending with `_`**: Converted to kanji using dictionary lookup (e.g., `nihongo_` → `日本語`)
 - **Text ending with multiple `_`**: Select specific kanji from multiple candidates (e.g., `ka__` → second kanji option for "ka")
 - **Text prefixed with `_`**: Kept as raw text until whitespace (e.g., `_Hello desu` → `Hello です`)
-- **Text prefixed with `:`**: Special conversion using henkan dictionary (e.g., `:cat` → `🐱`)
 - **Code blocks**: Text wrapped in `` ` `` or ``` ``` ``` is kept as-is
 - **Whitespace**: Preserved as-is in output
 
@@ -61,10 +60,6 @@ $ echo nihongo_ | niho
 $ echo ka__ | niho
 掛
 
-# Special conversions
-$ echo :cat | niho
-🐱
-
 # Mix different types
 $ echo watashi ha Ko-hi- wo nomimasu | niho
 わたしはコーヒーをのみます
@@ -85,14 +80,12 @@ The dictionary is stored in a JSONL (JSON Lines) format, where each line contain
 - **`hiragana`**: Maps romanized text to hiragana characters
 - **`katakana`**: Maps romanized text to katakana characters
 - **`kanji`**: Maps hiragana text to kanji characters (with multiple options support)
-- **`henkan`**: Maps text to special characters or phrases
 
 Example entries:
 ```json
 {"type": "hiragana", "from": "ka", "to": "か"}
 {"type": "katakana", "from": "ka", "to": "カ"}
 {"type": "kanji", "from": "にほんご", "to": ["日本語"]}
-{"type": "henkan", "from": "cat", "to": "🐱"}
 ```
 
 The default dictionary can be found at [default-dic.jsonl](default-dic.jsonl).

@@ -532,7 +532,6 @@
 {"type": "kanji", "from": "ようけん", "to": ["要件"]}
 {"type": "kanji", "from": "はんだん", "to": ["判断"]}
 {"type": "kanji", "from": "じゅうよう", "to": ["重要"]}
-{"type": "henkan", "from": "cat", "to": "🐱"}
 {"type": "kanji", "from": "まい", "to": ["毎"]}
 {"type": "kanji", "from": "たんさく", "to": ["探索"]}
 {"type": "kanji", "from": "せいげん", "to": ["制限"]}
@@ -587,10 +586,6 @@
 {"type": "kanji", "from": "み", "to": ["見", "未"]}
 {"type": "kanji", "from": "しゅうごう", "to": ["集合"]}
 {"type": "kanji", "from": "とお", "to": ["通"]}
-{"type": "henkan", "from": "i", "to": "- "}
-{"type": "henkan", "from": "ii", "to": "  - "}
-{"type": "henkan", "from": "iii", "to": "    - "}
-{"type": "henkan", "from": "iiii", "to": "      - "}
 {"type": "kanji", "from": "さいしょ", "to": ["最初"]}
 {"type": "kanji", "from": "かんりょう", "to": ["完了"]}
 {"type": "kanji", "from": "あと", "to": ["後"]}
@@ -671,7 +666,6 @@
 {"type": "kanji", "from": "で", "to": ["出"]}
 {"type": "kanji", "from": "めずらし", "to": ["珍し"]}
 {"type": "kanji", "from": "かる", "to": ["軽"]}
-{"type": "henkan", "from": "ten", "to": "・"}
 {"type": "kanji", "from": "ここ", "to": ["個々"]}
 {"type": "kanji", "from": "てがる", "to": ["手軽"]}
 {"type": "kanji", "from": "ぜんたい", "to": ["全体"]}
@@ -767,9 +761,6 @@
 {"type": "kanji", "from": "ようきゅう", "to": ["要求"]}
 {"type": "kanji", "from": "へんどう", "to": ["変動"]}
 {"type": "kanji", "from": "こんなん", "to": ["困難"]}
-{"type": "henkan", "from": "struct", "to": "#[derive(Debug)]\nstruct\n{\n}\n"}
-{"type": "henkan", "from": "or", "to": "-> orfail::Result<()>"}
-{"type": "henkan", "from": "jr", "to": "-> Result<(), nojson::JsonParseError>"}
 {"type": "kanji", "from": "はか", "to": ["測"]}
 {"type": "kanji", "from": "しひょう", "to": ["指標"]}
 {"type": "kanji", "from": "すぎ", "to": ["過ぎ"]}
@@ -953,7 +944,6 @@
 {"type": "kanji", "from": "きょか", "to": ["許可"]}
 {"type": "kanji", "from": "せんこう", "to": ["先行"]}
 {"type": "kanji", "from": "めいかく", "to": ["明確"]}
-{"type": "kanji", "from": "たい", "to": ["対"]}
 {"type": "kanji", "from": "つよ", "to": ["強"]}
 {"type": "kanji", "from": "きょうりょく", "to": ["強力"]}
 {"type": "kanji", "from": "じゅうし", "to": ["重視"]}
@@ -1255,7 +1245,6 @@
 {"type": "kanji", "from": "そなえ", "to": ["備え"]}
 {"type": "kanji", "from": "ていねい", "to": ["丁寧"]}
 {"type": "kanji", "from": "きょうせい", "to": ["強制"]}
-{"type": "kanji", "from": "きゅう", "to": ["旧"]}
 {"type": "kanji", "from": "うつ", "to": ["移"]}
 {"type": "kanji", "from": "きょうつう", "to": ["共通"]}
 {"type": "kanji", "from": "きょだい", "to": ["巨大"]}
@@ -1385,3 +1374,8 @@
 {"type": "kanji", "from": "あっか", "to": ["悪化"]}
 {"type": "kanji", "from": "こうぞう", "to": ["構造"]}
 {"type": "kanji", "from": "しんちょう", "to": ["慎重"]}
+{"type": "kanji", "from": "ひま", "to": ["暇"]}
+{"type": "kanji", "from": "たい", "to": ["体", "帯"]}
+{"type": "kanji", "from": "あきらか", "to": ["明らか"]}
+{"type": "kanji", "from": "きゅう", "to": ["旧", "級"]}
+{"type": "kanji", "from": "そがい", "to": ["阻害"]}

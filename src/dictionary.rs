@@ -53,10 +53,6 @@ pub enum DictionaryEntry<'a> {
         from: DictionaryString<'a>,
         to: Vec<DictionaryString<'a>>,
     },
-    Henkan {
-        from: DictionaryString<'a>,
-        to: DictionaryString<'a>,
-    },
 }
 
 impl<'a> DictionaryEntry<'a> {
@@ -97,16 +93,6 @@ impl<'a> DictionaryEntry<'a> {
                     .required()?
                     .to_unquoted_string_str()?,
                 to: value.to_member("to")?.required()?.try_into()?,
-            }),
-            "henkan" => Ok(Self::Henkan {
-                from: value
-                    .to_member("from")?
-                    .required()?
-                    .to_unquoted_string_str()?,
-                to: value
-                    .to_member("to")?
-                    .required()?
-                    .to_unquoted_string_str()?,
             }),
             ty => Err(value.invalid(format!("unknown type: {ty:?}"))),
         }
