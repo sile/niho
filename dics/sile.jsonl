@@ -765,7 +765,6 @@
 {"type": "kanji", "from": "しひょう", "to": ["指標"]}
 {"type": "kanji", "from": "すぎ", "to": ["過ぎ"]}
 {"type": "kanji", "from": "にんげん", "to": ["人間"]}
-{"type": "kanji", "from": "かんかく", "to": ["感覚"]}
 {"type": "kanji", "from": "ゆうぼう", "to": ["有望"]}
 {"type": "kanji", "from": "わけ", "to": ["訳"]}
 {"type": "kanji", "from": "え", "to": ["得"]}
@@ -878,7 +877,6 @@
 {"type": "kanji", "from": "ばんめ", "to": ["番目"]}
 {"type": "kanji", "from": "ふそく", "to": ["不足"]}
 {"type": "kanji", "from": "いじょう", "to": ["以上"]}
-{"type": "kanji", "from": "こ", "to": ["来"]}
 {"type": "kanji", "from": "たり", "to": ["足り"]}
 {"type": "kanji", "from": "いま", "to": ["今"]}
 {"type": "kanji", "from": "せいこう", "to": ["成功"]}
@@ -1383,3 +1381,12 @@
 {"type": "kanji", "from": "こうそく", "to": ["高速"]}
 {"type": "kanji", "from": "じゅみょう", "to": ["寿命"]}
 {"type": "kanji", "from": "つく", "to": ["作"]}
+{"type": "kanji", "from": "ぶ", "to": ["部"]}
+{"type": "kanji", "from": "きそ", "to": ["基礎"]}
+{"type": "kanji", "from": "おうよう", "to": ["応用"]}
+{"type": "kanji", "from": "はってん", "to": ["発展"]}
+{"type": "kanji", "from": "ほうしん", "to": ["方針"]}
+{"type": "kanji", "from": "かいへん", "to": ["改変"]}
+{"type": "kanji", "from": "よゆう", "to": ["余裕"]}
+{"type": "kanji", "from": "こ", "to": ["来", "個"]}
+{"type": "kanji", "from": "かんかく", "to": ["感覚", "間隔"]}
