@@ -1239,7 +1239,6 @@
 {"type": "kanji", "from": "お", "to": ["置"]}
 {"type": "kanji", "from": "またg", "to": ["跨"]}
 {"type": "kanji", "from": "けいか", "to": ["経過"]}
-{"type": "kanji", "from": "ふか", "to": ["負荷", "不可"]}
 {"type": "kanji", "from": "そなえ", "to": ["備え"]}
 {"type": "kanji", "from": "ていねい", "to": ["丁寧"]}
 {"type": "kanji", "from": "きょうせい", "to": ["強制"]}
@@ -1407,3 +1406,9 @@
 {"type": "kanji", "from": "きじ", "to": ["記事"]}
 {"type": "kanji", "from": "きじゅつ", "to": ["記述"]}
 {"type": "kanji", "from": "もうら", "to": ["網羅"]}
+{"type": "kanji", "from": "ついきゅう", "to": ["追求"]}
+{"type": "kanji", "from": "さつ", "to": ["冊"]}
+{"type": "kanji", "from": "りかい", "to": ["理解"]}
+{"type": "kanji", "from": "ふか", "to": ["負荷", "不可", "深"]}
+{"type": "kanji", "from": "まな", "to": ["学"]}
+{"type": "kanji", "from": "りょうしゃ", "to": ["両者"]}
