@@ -16,6 +16,7 @@
 {"type": "hiragana", "from": "sa", "to": "さ"}
 {"type": "hiragana", "from": "si", "to": "し"}
 {"type": "hiragana", "from": "shi", "to": "し"}
+{"type": "hiragana", "from": "she", "to": "しぇ"}
 {"type": "hiragana", "from": "su", "to": "す"}
 {"type": "hiragana", "from": "se", "to": "せ"}
 {"type": "hiragana", "from": "so", "to": "そ"}
@@ -183,6 +184,7 @@
 {"type": "katakana", "from": "sa", "to": "サ"}
 {"type": "katakana", "from": "si", "to": "シ"}
 {"type": "katakana", "from": "shi", "to": "シ"}
+{"type": "katakana", "from": "she", "to": "シェ"}
 {"type": "katakana", "from": "su", "to": "ス"}
 {"type": "katakana", "from": "se", "to": "セ"}
 {"type": "katakana", "from": "so", "to": "ソ"}
@@ -391,7 +393,6 @@
 {"type": "kanji", "from": "おおい", "to": ["多い"]}
 {"type": "kanji", "from": "こうりつ", "to": ["効率"]}
 {"type": "kanji", "from": "あが", "to": ["上が"]}
-{"type": "kanji", "from": "ゆうせん", "to": ["優先"]}
 {"type": "kanji", "from": "じゅんい", "to": ["順位"]}
 {"type": "kanji", "from": "ちゅうい", "to": ["注意"]}
 {"type": "kanji", "from": "ひかく", "to": ["比較"]}
@@ -498,7 +499,6 @@
 {"type": "kanji", "from": "しゃ", "to": ["者"]}
 {"type": "kanji", "from": "む", "to": ["向", "無"]}
 {"type": "kanji", "from": "ないよう", "to": ["内容"]}
-{"type": "kanji", "from": "かんけつ", "to": ["簡潔"]}
 {"type": "kanji", "from": "じゅうぶん", "to": ["十分"]}
 {"type": "kanji", "from": "れい", "to": ["例"]}
 {"type": "kanji", "from": "しゅつりょく", "to": ["出力"]}
@@ -989,7 +989,6 @@
 {"type": "kanji", "from": "ふくじ", "to": ["副次"]}
 {"type": "kanji", "from": "ひとで", "to": ["人手"]}
 {"type": "kanji", "from": "じゅうだい", "to": ["重大"]}
-{"type": "kanji", "from": "かんじ", "to": ["感じ"]}
 {"type": "kanji", "from": "ひょうげん", "to": ["表現"]}
 {"type": "kanji", "from": "かはんすう", "to": ["過半数"]}
 {"type": "kanji", "from": "まわ", "to": ["周", "回"]}
@@ -1435,3 +1434,97 @@
 {"type": "kanji", "from": "ひょうじゅん", "to": ["標準"]}
 {"type": "kanji", "from": "せんしゅつ", "to": ["選出"]}
 {"type": "kanji", "from": "とうごう", "to": ["統合"]}
+{"type": "kanji", "from": "しゅみ", "to": ["趣味"]}
+{"type": "kanji", "from": "びぼうろく", "to": ["備忘録"]}
+{"type": "kanji", "from": "じさく", "to": ["自作"]}
+{"type": "kanji", "from": "らいねん", "to": ["来年"]}
+{"type": "kanji", "from": "ゆうせん", "to": ["優先", "有線"]}
+{"type": "kanji", "from": "しごと", "to": ["仕事"]}
+{"type": "kanji", "from": "まいにち", "to": ["毎日"]}
+{"type": "kanji", "from": "まんぞく", "to": ["満足"]}
+{"type": "kanji", "from": "さいきん", "to": ["最近"]}
+{"type": "kanji", "from": "いっしょ", "to": ["一緒"]}
+{"type": "kanji", "from": "こうにゅう", "to": ["購入"]}
+{"type": "kanji", "from": "あげ", "to": ["挙げ", "上げ"]}
+{"type": "kanji", "from": "けず", "to": ["削"]}
+{"type": "kanji", "from": "ようぼう", "to": ["要望"]}
+{"type": "kanji", "from": "むせん", "to": ["無線"]}
+{"type": "kanji", "from": "さくねん", "to": ["昨年"]}
+{"type": "kanji", "from": "ことし", "to": ["今年"]}
+{"type": "kanji", "from": "おちつ", "to": ["落ち着"]}
+{"type": "kanji", "from": "かいけつ", "to": ["解決"]}
+{"type": "kanji", "from": "へんれき", "to": ["遍歴"]}
+{"type": "kanji", "from": "てんとう", "to": ["店頭"]}
+{"type": "kanji", "from": "しょうどうがい", "to": ["衝動買い"]}
+{"type": "kanji", "from": "ゆうめい", "to": ["有名"]}
+{"type": "kanji", "from": "も", "to": ["持"]}
+{"type": "kanji", "from": "いっちょういったん", "to": ["一長一短"]}
+{"type": "kanji", "from": "しもん", "to": ["指紋"]}
+{"type": "kanji", "from": "がめん", "to": ["画面"]}
+{"type": "kanji", "from": "かいてん", "to": ["回転"]}
+{"type": "kanji", "from": "かんど", "to": ["感度"]}
+{"type": "kanji", "from": "はんのう", "to": ["反応"]}
+{"type": "kanji", "from": "はいめん", "to": ["背面"]}
+{"type": "kanji", "from": "しつかん", "to": ["質感"]}
+{"type": "kanji", "from": "ひだりて", "to": ["左手"]}
+{"type": "kanji", "from": "みぎて", "to": ["右手"]}
+{"type": "kanji", "from": "かいてき", "to": ["快適"]}
+{"type": "kanji", "from": "しょうじき", "to": ["正直"]}
+{"type": "kanji", "from": "あんしん", "to": ["安心"]}
+{"type": "kanji", "from": "もじ", "to": ["文字"]}
+{"type": "kanji", "from": "しゅたい", "to": ["主体"]}
+{"type": "kanji", "from": "きせつ", "to": ["季節"]}
+{"type": "kanji", "from": "はる", "to": ["春"]}
+{"type": "kanji", "from": "なつ", "to": ["夏"]}
+{"type": "kanji", "from": "べつ", "to": ["別"]}
+{"type": "kanji", "from": "おうか", "to": ["押下"]}
+{"type": "kanji", "from": "ざんねん", "to": ["残念"]}
+{"type": "kanji", "from": "といあわせ", "to": ["問い合わせ"]}
+{"type": "kanji", "from": "こたいさ", "to": ["個体差"]}
+{"type": "kanji", "from": "こま", "to": ["困"]}
+{"type": "kanji", "from": "えきしょう", "to": ["液晶"]}
+{"type": "kanji", "from": "なれ", "to": ["慣れ"]}
+{"type": "kanji", "from": "とくゆう", "to": ["特有"]}
+{"type": "kanji", "from": "きいん", "to": ["起因"]}
+{"type": "kanji", "from": "たんまつ", "to": ["端末"]}
+{"type": "kanji", "from": "ひんじゃく", "to": ["貧弱"]}
+{"type": "kanji", "from": "へいがい", "to": ["弊害"]}
+{"type": "kanji", "from": "すうねん", "to": ["数年"]}
+{"type": "kanji", "from": "ぼしゅう", "to": ["募集"]}
+{"type": "kanji", "from": "ふあん", "to": ["不安"]}
+{"type": "kanji", "from": "ころ", "to": ["頃"]}
+{"type": "kanji", "from": "とおい", "to": ["遠い"]}
+{"type": "kanji", "from": "いんしょう", "to": ["印象"]}
+{"type": "kanji", "from": "せいしき", "to": ["正式"]}
+{"type": "kanji", "from": "あたりまえ", "to": ["当たり前"]}
+{"type": "kanji", "from": "とし", "to": ["年"]}
+{"type": "kanji", "from": "ふじゅうぶん", "to": ["不十分"]}
+{"type": "kanji", "from": "ていけい", "to": ["定型"]}
+{"type": "kanji", "from": "くりかえし", "to": ["繰り返し"]}
+{"type": "kanji", "from": "とくい", "to": ["得意"]}
+{"type": "kanji", "from": "かどく", "to": ["可読"]}
+{"type": "kanji", "from": "かいしゃ", "to": ["会社"]}
+{"type": "kanji", "from": "してき", "to": ["私的"]}
+{"type": "kanji", "from": "りょうきん", "to": ["料金"]}
+{"type": "kanji", "from": "かんしゃ", "to": ["感謝"]}
+{"type": "kanji", "from": "よせ", "to": ["寄せ"]}
+{"type": "kanji", "from": "かんけつ", "to": ["簡潔", "完結"]}
+{"type": "kanji", "from": "こころみ", "to": ["試み"]}
+{"type": "kanji", "from": "ざせつ", "to": ["挫折"]}
+{"type": "kanji", "from": "みりょく", "to": ["魅力"]}
+{"type": "kanji", "from": "ふべん", "to": ["不便"]}
+{"type": "kanji", "from": "ほうち", "to": ["放置"]}
+{"type": "kanji", "from": "ふとじ", "to": ["太字"]}
+{"type": "kanji", "from": "まよ", "to": ["迷"]}
+{"type": "kanji", "from": "きりだす", "to": ["切り出す"]}
+{"type": "kanji", "from": "おち", "to": ["落ち", "堕ち"]}
+{"type": "kanji", "from": "かって", "to": ["勝手"]}
+{"type": "kanji", "from": "たしょう", "to": ["多少"]}
+{"type": "kanji", "from": "だいたい", "to": ["代替"]}
+{"type": "kanji", "from": "へんしゅう", "to": ["編集"]}
+{"type": "kanji", "from": "また", "to": ["跨"]}
+{"type": "kanji", "from": "ひら", "to": ["開"]}
+{"type": "kanji", "from": "じゅよう", "to": ["需要"]}
+{"type": "kanji", "from": "りゃく", "to": ["略"]}
+{"type": "kanji", "from": "じしょ", "to": ["辞書"]}
+{"type": "kanji", "from": "かんじ", "to": ["感じ", "漢字"]}

@@ -16,6 +16,7 @@
 {"type": "hiragana", "from": "sa", "to": "さ"}
 {"type": "hiragana", "from": "si", "to": "し"}
 {"type": "hiragana", "from": "shi", "to": "し"}
+{"type": "hiragana", "from": "she", "to": "しぇ"}
 {"type": "hiragana", "from": "su", "to": "す"}
 {"type": "hiragana", "from": "se", "to": "せ"}
 {"type": "hiragana", "from": "so", "to": "そ"}
@@ -183,6 +184,7 @@
 {"type": "katakana", "from": "sa", "to": "サ"}
 {"type": "katakana", "from": "si", "to": "シ"}
 {"type": "katakana", "from": "shi", "to": "シ"}
+{"type": "katakana", "from": "she", "to": "シェ"}
 {"type": "katakana", "from": "su", "to": "ス"}
 {"type": "katakana", "from": "se", "to": "セ"}
 {"type": "katakana", "from": "so", "to": "ソ"}
