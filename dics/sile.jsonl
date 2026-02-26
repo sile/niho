@@ -1270,7 +1270,6 @@
 {"type": "kanji", "from": "げきてき", "to": ["劇的"]}
 {"type": "kanji", "from": "とうひょう", "to": ["投票"]}
 {"type": "kanji", "from": "たいせい", "to": ["耐性"]}
-{"type": "kanji", "from": "だいすう", "to": ["台数"]}
 {"type": "kanji", "from": "きよ", "to": ["寄与"]}
 {"type": "kanji", "from": "いぎ", "to": ["意義"]}
 {"type": "kanji", "from": "ふめい", "to": ["不明"]}
@@ -1561,7 +1560,38 @@
 {"type": "kanji", "from": "げんそく", "to": ["原則"]}
 {"type": "kanji", "from": "すなお", "to": ["素直"]}
 {"type": "kanji", "from": "てきぎ", "to": ["適期"]}
-{"type": "kanji", "from": "きょうちょう", "to": ["協調"]}
 {"type": "kanji", "from": "ほうふ", "to": ["豊富"]}
 {"type": "kanji", "from": "なじ", "to": ["馴染"]}
 {"type": "kanji", "from": "がくしゅう", "to": ["学習"]}
+{"type": "kanji", "from": "しっぴつ", "to": ["執筆"]}
+{"type": "kanji", "from": "こうほう", "to": ["後方"]}
+{"type": "kanji", "from": "ひながた", "to": ["雛形"]}
+{"type": "kanji", "from": "こわ", "to": ["壊"]}
+{"type": "kanji", "from": "かつあい", "to": ["割愛"]}
+{"type": "kanji", "from": "かま", "to": ["構"]}
+{"type": "kanji", "from": "れいがい", "to": ["例外"]}
+{"type": "kanji", "from": "かいそう", "to": ["階層"]}
+{"type": "kanji", "from": "しこう", "to": ["指向"]}
+{"type": "kanji", "from": "けいしょう", "to": ["継承"]}
+{"type": "kanji", "from": "きゃくちゅう", "to": ["脚注"]}
+{"type": "kanji", "from": "かんしゅう", "to": ["慣習"]}
+{"type": "kanji", "from": "かたち", "to": ["形"]}
+{"type": "kanji", "from": "しき", "to": ["式"]}
+{"type": "kanji", "from": "ふせいかく", "to": ["不正確"]}
+{"type": "kanji", "from": "すいろん", "to": ["推論"]}
+{"type": "kanji", "from": "にゅうもん", "to": ["入門"]}
+{"type": "kanji", "from": "たいし", "to": ["対し"]}
+{"type": "kanji", "from": "ほんすじ", "to": ["本筋"]}
+{"type": "kanji", "from": "たいs", "to": ["対"]}
+{"type": "kanji", "from": "はかい", "to": ["破壊"]}
+{"type": "kanji", "from": "ちゅうもく", "to": ["注目"]}
+{"type": "kanji", "from": "そくばく", "to": ["束縛"]}
+{"type": "kanji", "from": "きょうちょう", "to": ["協調", "強調"]}
+{"type": "kanji", "from": "だいすう", "to": ["台数", "代数"]}
+{"type": "kanji", "from": "くみたて", "to": ["組み立て"]}
+{"type": "kanji", "from": "はぶ", "to": ["省"]}
+{"type": "kanji", "from": "ほんらい", "to": ["本来"]}
+{"type": "kanji", "from": "ゆうげん", "to": ["有限"]}
+{"type": "kanji", "from": "むげん", "to": ["無限"]}
+{"type": "kanji", "from": "ぬけ", "to": ["抜け"]}
+{"type": "kanji", "from": "ごし", "to": ["越し"]}
