@@ -560,7 +560,6 @@
 {"type": "kanji", "from": "がいとう", "to": ["該当"]}
 {"type": "kanji", "from": "いちれん", "to": ["一連"]}
 {"type": "kanji", "from": "いしき", "to": ["意識"]}
-{"type": "kanji", "from": "かい", "to": ["解"]}
 {"type": "kanji", "from": "さだま", "to": ["定ま"]}
 {"type": "kanji", "from": "ふく", "to": ["含"]}
 {"type": "kanji", "from": "さいしゅう", "to": ["最終"]}
@@ -1595,3 +1594,6 @@
 {"type": "kanji", "from": "むげん", "to": ["無限"]}
 {"type": "kanji", "from": "ぬけ", "to": ["抜け"]}
 {"type": "kanji", "from": "ごし", "to": ["越し"]}
+{"type": "kanji", "from": "かい", "to": ["解", "介"]}
+{"type": "kanji", "from": "あつめ", "to": ["集め"]}
+{"type": "kanji", "from": "くわわ", "to": ["加わ"]}
